@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block title %}Log-in{% endblock %}
+{% block content %}
+    <form action="." method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>
+              {{ field.label_tag }}<br>
+              {{ field }}
+              {% if field.help_text %}
+                <small style="color: grey">{{ field.help_text }}</small>
+              {% endif %}
+              {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+              {% endfor %}
+            </p>
+        {% endfor %}
+        <p><input type="submit" value="Войти"></p>
+        <br><a href="../signup"><button>Зарегистрироваться</button></a>
+    </form>
+{% endblock %}
+</body>
+</html>

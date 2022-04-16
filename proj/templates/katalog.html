@@ -1,0 +1,1407 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>katalog</title>
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <style>
+    /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Ensure that the HTML is always 100% height. This fixed body height issues in Chrome for example.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    min-height: 100%;
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    font-weight: inherit; /* 1 */
+    margin: 0; /* 3 */
+    padding: 0;
+}
+
+/**
+ * Remove the default button background color that browsers set
+ */
+
+button {
+    background: transparent;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * Make sure selects don't get the default browser styles.
+ */
+select {
+  -webkit-appearance: none;
+}
+
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ * 3. Disable resizing by default.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: none; /* 3 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul, li {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+button,
+input,
+fieldset,
+textarea,
+select {
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+  </style>
+  <style>
+    .fluid-span-1 {
+  width: 6.5%;
+}
+
+.fluid-span-2 {
+  width: 15%;
+}
+
+.fluid-span-3 {
+  width: 23.5%;
+}
+
+.fluid-span-4 {
+  width: 32%;
+}
+
+.fluid-span-5 {
+  width: 40.5%;
+}
+
+.fluid-span-6 {
+  width: 49%;
+}
+
+.fluid-span-7 {
+  width: 57.5%;
+}
+
+.fluid-span-8 {
+  width: 66%;
+}
+
+.fluid-span-9 {
+  width: 74.5%;
+}
+
+.fluid-span-10 {
+  width: 83%;
+}
+
+.fluid-span-11 {
+  width: 91.5%;
+}
+
+.fluid-span-12 {
+  width: 100%;
+}
+
+.fluid-offset-1 {
+  margin-left: 8.5%;
+}
+
+.fluid-offset-2 {
+  margin-left: 17%;
+}
+
+.fluid-offset-3 {
+  margin-left: 25.5%;
+}
+
+.fluid-offset-4 {
+  margin-left: 34%;
+}
+
+.fluid-offset-5 {
+  margin-left: 42.5%;
+}
+
+.fluid-offset-6 {
+  margin-left: 51%;
+}
+
+.fluid-offset-7 {
+  margin-left: 59.5%;
+}
+
+.fluid-offset-8 {
+  margin-left: 68%;
+}
+
+.fluid-offset-9 {
+  margin-left: 76.5%;
+}
+
+.fluid-offset-10 {
+  margin-left: 85%;
+}
+
+.fluid-offset-11 {
+  margin-left: 93.5%;
+}
+
+
+  </style>
+  <style>
+    body {
+  min-width: none;
+  height: 100%;
+  min-height: nonepx;
+  background: url('../images/bg01.jpg') rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 47% 0%;
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.container {
+  float: left;
+}
+
+.container .container {
+  clear: both;
+  width: 100%;
+  height: 56px;
+  margin-top: 7px;
+}
+
+.container .element {
+  width: 20.3113077979%;
+  height: 56px;
+  border: 1px solid rgb(149, 149, 149);
+  background-size: 44px auto;
+  background-position: 45% 45%;
+}
+
+.container .element:hover {
+  background-size: 53px auto;
+}
+
+.container .text {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.element {
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.text {
+  float: left;
+  clear: both;
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+}
+
+.container ._button {
+  font-size: 1em;
+  text-align: center;
+}
+
+.container-1 {
+  position: relative;
+  clear: both;
+  z-index: 23;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 29px 0 0 10.31641%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-11 {
+  position: relative;
+  z-index: 39;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-13 {
+  position: relative;
+  clear: both;
+  z-index: 71;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 10.31641%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-15 {
+  position: relative;
+  z-index: 79;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 0.63021%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-17 {
+  position: relative;
+  z-index: 63;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-3 {
+  position: relative;
+  z-index: 31;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 29px 0 0 0.63021%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-5 {
+  position: relative;
+  z-index: 11;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 29px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-7 {
+  position: relative;
+  clear: both;
+  z-index: 47;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 10.31641%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-9 {
+  position: relative;
+  z-index: 55;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 0.62891%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.element-1 {
+  position: relative;
+  z-index: 0;
+  width: 7.119140625%;
+  min-width: none;
+  height: 58px;
+  min-height: nonepx;
+  margin: 52px 0 0 12.125%;
+  background-image: url('../images/logo%20(1).png');
+  background-size: contain;
+  background-position: left top;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.element-10,
+.element-12,
+.element-14,
+.element-16,
+.element-18,
+.element-2,
+.element-4,
+.element-6,
+.element-8 {
+  background-image: url('../images/like.svg');
+  background-color: rgba(64, 12, 12, 0);
+}
+
+.element-11,
+.element-13,
+.element-15,
+.element-17,
+.element-19,
+.element-3,
+.element-5,
+.element-7,
+.element-9 {
+  margin-left: 6.25%;
+  background-image: url('../images/rating.svg');
+}
+
+.text-1 {
+  position: relative;
+  z-index: 1;
+  width: 219px;
+  min-width: none;
+  min-height: 58px;
+  margin: -50px 0 0 17.77865%;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Verdana;
+  font-style: normal;
+  font-size: 1.688em;
+  color: rgb(0, 0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.text-11,
+.text-13,
+.text-15,
+.text-17,
+.text-19,
+.text-3,
+.text-5,
+.text-7,
+.text-9 {
+  width: 72.1540456949%;
+  min-height: 38px;
+  margin: 20px 0 0 11.10832%;
+  font-size: 1em;
+}
+
+.text-2 {
+  position: relative;
+  z-index: 3;
+  width: 24.12890625%;
+  min-width: 24.13px;
+  height: 56px;
+  min-height: 47px;
+  margin: 72px 0 0 10%;
+  padding: 16px;
+  background-color: rgb(75, 190, 196);
+  font-size: 1.125em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.text-10,
+.text-12,
+.text-14,
+.text-16,
+.text-18,
+.text-20,
+.text-4,
+.text-6,
+.text-8 {
+  width: 72.0243440087%;
+  min-height: 46px;
+  margin: 26px 0 0 11.11837%;
+  text-shadow: 4px 2px 5px rgba(72, 65, 65, 0.5);
+  font-style: italic;
+  font-size: 2.75em;
+}
+
+._button-1 {
+  position: relative;
+  z-index: 2;
+  width: 14.3749999999%;
+  min-width: none;
+  height: 30px;
+  min-height: nonepx;
+  margin: -41px 0 0 23.69401%;
+  background-color: rgb(75, 190, 196);
+  font-family: Bitter;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+._button-2 {
+  position: relative;
+  z-index: 14;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 72px 0 0 0.32422%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-3 {
+  position: relative;
+  z-index: 15;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 72px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-4 {
+  position: relative;
+  z-index: 13;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 72px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-5 {
+  position: relative;
+  z-index: 12;
+  width: 9.8333333333%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 72px 0 0 0.31771%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.container ._button-10,
+.container ._button-12,
+.container ._button-14,
+.container ._button-16,
+.container ._button-18,
+.container ._button-20,
+.container ._button-22,
+.container ._button-6,
+.container ._button-8 {
+  width: 100%;
+  height: 157px;
+  background-image: none, url('../images/phone.png');
+  background-repeat: repeat, no-repeat;
+  background-size: auto auto, contain;
+  background-position: left top, center center;
+  background-attachment: scroll, scroll;
+  color: rgb(0, 0, 0);
+}
+
+.container ._button-10:hover,
+.container ._button-12:hover,
+.container ._button-14:hover,
+.container ._button-16:hover,
+.container ._button-18:hover,
+.container ._button-20:hover,
+.container ._button-22:hover,
+.container ._button-6:hover,
+.container ._button-8:hover {
+  background-image: url('../images/Micromax-2(9).jpg'), url('../images/phone.png');
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: center center, center center;
+}
+
+.container ._button-11,
+.container ._button-13,
+.container ._button-15,
+.container ._button-17,
+.container ._button-19,
+.container ._button-21,
+.container ._button-23,
+.container ._button-7,
+.container ._button-9 {
+  width: 46.8792919273%;
+  height: 56px;
+  margin-left: 6.23493%;
+  background: url('../images/cart.svg') rgb(75, 190, 196);
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+  background-position: 14% 41%;
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-11:hover,
+.container ._button-13:hover,
+.container ._button-15:hover,
+.container ._button-17:hover,
+.container ._button-19:hover,
+.container ._button-21:hover,
+.container ._button-23:hover,
+.container ._button-7:hover,
+.container ._button-9:hover {
+  background-color: rgb(244, 93, 236);
+}
+
+.container ._button-11:active,
+.container ._button-13:active,
+.container ._button-15:active,
+.container ._button-17:active,
+.container ._button-19:active,
+.container ._button-21:active,
+.container ._button-23:active,
+.container ._button-7:active,
+.container ._button-9:active {
+  background-color: rgb(159, 7, 150);
+  color: rgb(255, 255, 255);
+}
+
+@media(max-width: 800px) {
+  .container .text {
+    margin-left: 11.09935%;
+  }
+
+  .container .container-12 {
+    position: relative;
+    z-index: 37;
+    margin-top: -37px;
+  }
+
+  .container .container-2 {
+    position: relative;
+    z-index: 21;
+    margin-top: -37px;
+  }
+
+  .container .container-6 {
+    position: relative;
+    z-index: 9;
+    margin-top: -37px;
+  }
+
+  .container ._button-11,
+  .container ._button-13,
+  .container ._button-15,
+  .container ._button-17,
+  .container ._button-19,
+  .container ._button-21,
+  .container ._button-23,
+  .container ._button-7,
+  .container ._button-9,
+  .container .element-11,
+  .container .element-13,
+  .container .element-15,
+  .container .element-17,
+  .container .element-19,
+  .container .element-3,
+  .container .element-5,
+  .container .element-7,
+  .container .element-9 {
+    margin-left: 6.20747%;
+  }
+
+  .container .text-14 {
+    position: relative;
+    z-index: 33;
+  }
+
+  .container .text-4 {
+    position: relative;
+    z-index: 17;
+  }
+
+  .container .text-8 {
+    position: relative;
+    z-index: 5;
+  }
+
+  .container-1 {
+    position: relative;
+    clear: none;
+    z-index: 23;
+    margin-top: 30px;
+    margin-left: 4.8418%;
+  }
+
+  .container-11 {
+    position: relative;
+    clear: both;
+    z-index: 39;
+    margin-top: -372px;
+    margin-left: 74.51953%;
+  }
+
+  .container-13 {
+    position: relative;
+    clear: none;
+    z-index: 71;
+    margin-top: 269px;
+    margin-left: 20.98047%;
+  }
+
+  .container-15 {
+    position: relative;
+    z-index: 79;
+    margin-top: 269px;
+    margin-left: 13.8125%;
+  }
+
+  .container-17 {
+    position: relative;
+    clear: both;
+    z-index: 63;
+    margin-top: -372px;
+    margin-left: 100.89453%;
+  }
+
+  .container-3 {
+    position: relative;
+    z-index: 31;
+    margin-top: 30px;
+    margin-left: 14.7168%;
+  }
+
+  .container-5 {
+    position: relative;
+    clear: both;
+    z-index: 11;
+    margin-top: -372px;
+    margin-left: 53.94336%;
+  }
+
+  .container-7 {
+    position: relative;
+    z-index: 47;
+    margin-top: -286px;
+    margin-left: -5.39258%;
+  }
+
+  .container-9 {
+    position: relative;
+    z-index: 55;
+    margin-top: -286px;
+    margin-left: 13.98438%;
+  }
+
+  .element-1 {
+    position: relative;
+    z-index: 0;
+    margin-top: 54px;
+    margin-left: 10%;
+  }
+
+  .text-1 {
+    position: relative;
+    clear: none;
+    z-index: 1;
+    margin-top: 60px;
+    margin-left: 0.625%;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 3;
+    margin-top: 71px;
+  }
+
+  ._button-1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 69px;
+    margin-left: 23.69727%;
+  }
+
+  ._button-2 {
+    position: relative;
+    z-index: 14;
+    margin-left: 17.48047%;
+  }
+
+  ._button-3 {
+    position: relative;
+    clear: both;
+    z-index: 15;
+    margin-top: -55px;
+    margin-left: 44.56641%;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 13;
+    margin-left: 0.24219%;
+  }
+
+  ._button-5 {
+    position: relative;
+    z-index: 12;
+    margin-top: -55px;
+    margin-left: 64.9609399999%;
+  }
+}
+
+@media(max-width: 800px) {
+  body {
+    font-size: 1em;
+  }
+
+  .container .container-12 {
+    position: relative;
+    z-index: 37;
+  }
+
+  .container .container-2 {
+    position: relative;
+    z-index: 21;
+  }
+
+  .container .container-6 {
+    position: relative;
+    z-index: 9;
+  }
+
+  .container .text-14 {
+    position: relative;
+    z-index: 33;
+  }
+
+  .container .text-4 {
+    position: relative;
+    z-index: 17;
+  }
+
+  .container .text-8 {
+    position: relative;
+    z-index: 5;
+  }
+
+  .container-1 {
+    position: relative;
+    z-index: 23;
+  }
+
+  .container-11 {
+    position: relative;
+    z-index: 39;
+  }
+
+  .container-13 {
+    position: relative;
+    z-index: 71;
+  }
+
+  .container-15 {
+    position: relative;
+    z-index: 79;
+  }
+
+  .container-17 {
+    position: relative;
+    z-index: 63;
+  }
+
+  .container-3 {
+    position: relative;
+    z-index: 31;
+  }
+
+  .container-5 {
+    position: relative;
+    z-index: 11;
+  }
+
+  .container-7 {
+    position: relative;
+    z-index: 47;
+  }
+
+  .container-9 {
+    position: relative;
+    z-index: 55;
+  }
+
+  .element-1 {
+    position: relative;
+    z-index: 0;
+  }
+
+  .text-1 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 3;
+    font-style: normal;
+    text-transform: none;
+  }
+
+  ._button-1 {
+    position: relative;
+    z-index: 2;
+  }
+
+  ._button-2 {
+    position: relative;
+    z-index: 14;
+  }
+
+  ._button-3 {
+    position: relative;
+    z-index: 15;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 13;
+  }
+
+  ._button-5 {
+    position: relative;
+    z-index: 12;
+  }
+}
+  </style>
+</head>
+<body class="body page-katalog clearfix">
+  <div class="element element-1"></div>
+  <p class="text text-1">Electrolux</p>
+  <a href="../login"><button class="_button _button-1">Войти</button></a>
+  <p class="text text-2">КАТАЛОГ</p>
+  <button class="_button _button-2">&nbsp; &nbsp;Доставка</button>
+  <button class="_button _button-3">&nbsp; &nbsp;Блог</button>
+  <button onClick="window.location='index.html';" class="_button _button-4">&nbsp; Информация</button>
+  <button class="_button _button-5">&nbsp; &nbsp;Контакты</button>
+  {% for product in products %}
+  <div class="container container-1 clearfix">
+    <button class="_button _button-6"></button>
+    <p class="text text-3">{{ product.name_product}}</p>
+    <p class="text text-4">{{product.price}}.-</p>
+    <div class="container container-2 clearfix">
+      <div class="element element-2"></div>
+      <a href="/product/{{ product.id }}"><button class="_button _button-9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button></a>
+      <div class="element element-3"></div>
+    </div>
+  </div>
+  {% endfor %}
+</body>
+</html>
