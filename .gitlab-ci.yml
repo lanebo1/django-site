@@ -1,6 +1,6 @@
 image: python:latest
 
-before-sript:
+before_script:
     - python -V
 
 
@@ -22,5 +22,17 @@ unittest-job:
 
     artifacts:
         paths:
-            public/coverage
+            - public/coverage
+
+pylint:
+  stage: style
+  before_script:
+    - pip install pylint
+  script:
+      - cd main
+      - pylint -j 2 views.py models.py
+  artifacts:
+    paths:
+        - public/pylint.svg
+        - public/pylint.html
 
