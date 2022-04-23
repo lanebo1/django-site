@@ -32,7 +32,7 @@ pylint:
     - pip install pylint
   script:
       - cd main
-      - pylint views.py
+      - pylint models.py
   artifacts:
     paths:
         - public/pylint.svg
