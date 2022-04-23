@@ -7,36 +7,44 @@ from .models import Product
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+""" 
+    Python file for loading pages and doing things related to loading
+"""
 
 def index(request):
+    """ Function loading index page """
     context = {"current_user": request.user}
     return render(request, "index.html", context)
 
 
 def cart(request):
+    """ Function loading cart page """
     context = {"current_user": request.user}
     return render(request, "korzina.html", context)
 
 
 def delivery(request):
+    """ Function loading delivery page """
     context = {"current_user": request.user}
     return render(request, "dostavka.html", context)
 
 
 def katalog(request):
+    """ Function loading katalog page """
     context = {"current_user": request.user}
     context["products"] = Product.objects.all()
     return render(request, "katalog.html", context)
 
 
 def product(request, product_id):
+    """ Function loading products on 'tavar' page """
     product_info = Product.objects.get(id=product_id)
     context = {"current_user": request.user}
     context["info"] = product_info
     return render(request, "tavar.html", context)
 
 def register(request):
+    """ Function for controlling registration and showing registration page"""
     if request.method == 'POST':
         user_form = UserCreationForm(request.POST)
         if user_form.is_valid():
@@ -52,6 +60,7 @@ def register(request):
 
 
 def user_login(request):
+    """ Function for controlling authorization and loading login page"""
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -71,4 +80,5 @@ def user_login(request):
 
 @login_required
 def dashboard(request):
+    """ Page loading dashboard """
     return render(request, 'account/dashboard.html', {'section': 'dashboard'})
