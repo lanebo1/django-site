@@ -37,6 +37,7 @@ pylint:
   script:
       - cd main
       - pylint -j 2 models.py views.py
+      
 #  artifacts:
 #    paths:
 #        - public/pylint.svg
