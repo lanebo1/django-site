@@ -30,7 +30,7 @@ def delivery(request):
 
 
 def katalog(request):
-    """ Function loading katalog page """
+    """ Function loading catalog page """
     context = {"current_user": request.user}
     context["products"] = Product.objects.all()
     return render(request, "katalog.html", context)
@@ -81,4 +81,4 @@ def user_login(request):
 @login_required
 def dashboard(request):
     """ Page loading dashboard """
-    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+    return render(request, 'dashboard.html', {'section': 'dashboard'})
