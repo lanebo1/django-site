@@ -24,10 +24,11 @@ import debug_toolbar
 
 urlpatterns = [
     path('',views.index, name='index'),
-    path('katalog',views.katalog, name='katalog'),
+    path('katalog/',views.katalog, name='katalog'),
     path('product/<int:product_id>', views.product, name='tovar'),
-    path('delivery', views.delivery),
-    path('cart', views.cart),
+    path('delivery/', views.delivery),
+    path('cart/', views.cart),
+    path('info/', views.info),
     path('admin/', admin.site.urls),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     #path('/relogin/', django.contrib.auth.views.logout_then_login, name='relogin'),

@@ -22,6 +22,10 @@ def cart(request):
     context = {"current_user": request.user}
     return render(request, "korzina.html", context)
 
+def info(request):
+    """ Function loading info page """
+    context = {"current_user": request.user}
+    return render(request, "info.html", context)
 
 def delivery(request):
     """ Function loading delivery page """
@@ -30,7 +34,7 @@ def delivery(request):
 
 
 def katalog(request):
-    """ Function loading katalog page """
+    """ Function loading catalog page """
     context = {"current_user": request.user}
     context["products"] = Product.objects.all()
     return render(request, "katalog.html", context)
@@ -41,7 +45,7 @@ def product(request, product_id):
     product_info = Product.objects.get(id=product_id)
     context = {"current_user": request.user}
     context["info"] = product_info
-    return render(request, "tavar.html", context)
+    return render(request, "tovar.html", context)
 
 def register(request):
     """ Function for controlling registration and showing registration page"""
@@ -81,4 +85,4 @@ def user_login(request):
 @login_required
 def dashboard(request):
     """ Page loading dashboard """
-    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+    return render(request, 'dashboard.html', {'section': 'dashboard'})
