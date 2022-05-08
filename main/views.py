@@ -22,6 +22,10 @@ def cart(request):
     context = {"current_user": request.user}
     return render(request, "korzina.html", context)
 
+def info(request):
+    """ Function loading info page """
+    context = {"current_user": request.user}
+    return render(request, "info.html", context)
 
 def delivery(request):
     """ Function loading delivery page """
