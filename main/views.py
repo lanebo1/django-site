@@ -41,7 +41,7 @@ def product(request, product_id):
     product_info = Product.objects.get(id=product_id)
     context = {"current_user": request.user}
     context["info"] = product_info
-    return render(request, "tavar.html", context)
+    return render(request, "tovar.html", context)
 
 def register(request):
     """ Function for controlling registration and showing registration page"""
