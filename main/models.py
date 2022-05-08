@@ -9,7 +9,8 @@ class Product(models.Model):
     year = models.IntegerField()
     country_product = models.CharField(max_length=50)
     category_id = models.IntegerField()
-
+    amount = models.CharField()
+    availability = models.CharField()
 
 class Category(models.Model):
     name_category = models.CharField(max_length=50)
