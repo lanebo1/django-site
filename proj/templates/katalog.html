@@ -11,106 +11,26 @@
   <link rel="stylesheet" href="/static/css/katalog.css">
 </head>
 <body class="body page-katalog clearfix">
-  <div class="container container-1 clearfix">
-    <div class="element element-1"></div>
-    <p class="text text-1">Electrolux</p>
-    <button onClick="window.location='korzina.html';" class="_button _button-1"></button>
-    <button onClick="window.location='sign.html';" class="_button _button-2">Войти</button>
-  </div>
+  <div class="element element-1"></div>
+  <p class="text text-1">Electrolux</p>
+  <a href="../login"><button class="_button _button-1">Войти</button></a>
   <p class="text text-2">КАТАЛОГ</p>
-  <button onClick="window.location='dostavka.html';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
-  <button class="_button _button-4">&nbsp; &nbsp;Блог</button>
-  <button onClick="window.location='index.html';" class="_button _button-5">&nbsp; Информация</button>
-  <button class="_button _button-6">&nbsp; &nbsp;Контакты</button>
-  <div class="container container-2 clearfix">
-    <button class="_button _button-7"></button>
-    <p class="text text-3">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-4">5 289.-</p>
-    <div class="container container-3 clearfix">
+  <button class="_button _button-2">&nbsp; &nbsp;Доставка</button>
+  <button class="_button _button-3">&nbsp; &nbsp;Блог</button>
+  <button onClick="window.location='index.html';" class="_button _button-4">&nbsp; Информация</button>
+  <button class="_button _button-5">&nbsp; &nbsp;Контакты</button>
+  {% for product in products %}
+  <div class="container container-1 clearfix">
+    <button class="_button _button-6"></button>
+    <p class="text text-3">{{ product.name_product}}</p>
+    <p class="text text-4">{{product.price}}.-</p>
+    <div class="container container-2 clearfix">
       <div class="element element-2"></div>
-      <button class="_button _button-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
+      <a href="/product/{{ product.id }}"><button class="_button _button-9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button></a>
       <div class="element element-3"></div>
     </div>
   </div>
-  <div class="container container-4 clearfix">
-    <button class="_button _button-9"></button>
-    <p class="text text-5">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-6">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-4"></div>
-      <button class="_button _button-10">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-5"></div>
-    </div>
-  </div>
-  <div class="container container-6 clearfix">
-    <button class="_button _button-11"></button>
-    <p class="text text-7">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-8">5 289.-</p>
-    <div onClick="window.location='tovar.html';" class="container container-7 clearfix">
-      <div class="element element-6"></div>
-      <button class="_button _button-12">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-7"></div>
-    </div>
-  </div>
-  <div class="container container-8 clearfix">
-    <button class="_button _button-13"></button>
-    <p class="text text-9">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-10">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-8"></div>
-      <button class="_button _button-14">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-9"></div>
-    </div>
-  </div>
-  <div class="container container-10 clearfix">
-    <button class="_button _button-15"></button>
-    <p class="text text-11">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-12">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-10"></div>
-      <button class="_button _button-16">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-11"></div>
-    </div>
-  </div>
-  <div class="container container-12 clearfix">
-    <button class="_button _button-17"></button>
-    <p class="text text-13">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-14">5 289.-</p>
-    <div class="container container-13 clearfix">
-      <div class="element element-12"></div>
-      <button class="_button _button-18">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-13"></div>
-    </div>
-  </div>
-  <div class="container container-14 clearfix">
-    <button class="_button _button-19"></button>
-    <p class="text text-15">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-16">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-14"></div>
-      <button class="_button _button-20">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-15"></div>
-    </div>
-  </div>
-  <div class="container container-16 clearfix">
-    <button class="_button _button-21"></button>
-    <p class="text text-17">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-18">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-16"></div>
-      <button class="_button _button-22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-17"></div>
-    </div>
-  </div>
-  <div class="container container-18 clearfix">
-    <button class="_button _button-23"></button>
-    <p class="text text-19">Micromax Canvas Selfie 2 Q340 3G 8Gb Black Смартфон</p>
-    <p class="text text-20">5 289.-</p>
-    <div class="container clearfix">
-      <div class="element element-18"></div>
-      <button class="_button _button-24">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
-      <div class="element element-19"></div>
-    </div>
-  </div>
+  {% endfor %}
 </body>
+
 </html>
