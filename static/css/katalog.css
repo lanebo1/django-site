@@ -1,0 +1,782 @@
+body {
+  min-width: none;
+  height: 100%;
+  min-height: nonepx;
+  background: none rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.container {
+  float: left;
+}
+
+.container .container {
+  clear: both;
+  width: 100%;
+  height: 56px;
+  margin-top: 7px;
+}
+
+.container .text {
+  color: rgb(0, 0, 0);
+}
+
+.element {
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.text {
+  float: left;
+  clear: both;
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+}
+
+.container ._button {
+  font-size: 1em;
+  text-align: center;
+}
+
+.container-1 {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.container-10 {
+  position: relative;
+  z-index: 47;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 0.62891%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-12 {
+  position: relative;
+  z-index: 31;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-14 {
+  position: relative;
+  clear: both;
+  z-index: 63;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 10.29948%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-16 {
+  position: relative;
+  z-index: 71;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 0.63021%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-18 {
+  position: relative;
+  z-index: 55;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 16px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-2 {
+  position: relative;
+  clear: both;
+  z-index: 15;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 19px 0 0 10.29948%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-4 {
+  position: relative;
+  z-index: 23;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 19px 0 0 0.63021%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-6 {
+  position: relative;
+  z-index: 7;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 19px 0 0 0.48047%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.container-8 {
+  position: relative;
+  clear: both;
+  z-index: 39;
+  width: 26.0833333333%;
+  height: 372px;
+  margin: 17px 0 0 10.29948%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(244, 244, 244, 0.24);
+}
+
+.element-1 {
+  position: relative;
+  z-index: 72;
+  width: 7.3197836332%;
+  height: 58px;
+  margin-left: 11.43099%;
+  background-image: url('../images/logo%20(1).png');
+  background-size: contain;
+  background-position: left top;
+}
+
+.element-10,
+.element-12,
+.element-14,
+.element-16,
+.element-18,
+.element-2,
+.element-4,
+.element-6,
+.element-8 {
+  width: 20.3113077979%;
+  height: 56px;
+  border: 1px solid rgb(149, 149, 149);
+  background-image: url('../images/like.svg');
+  background-size: 44px auto;
+  background-position: 45% 45%;
+  background-color: rgba(64, 12, 12, 0);
+}
+
+.element-11,
+.element-13,
+.element-15,
+.element-17,
+.element-19,
+.element-3,
+.element-5,
+.element-7,
+.element-9 {
+  width: 20.3113077979%;
+  height: 56px;
+  margin-left: 6.25%;
+  border: 1px solid rgb(149, 149, 149);
+  background-image: url('../images/rating.svg');
+  background-size: 44px auto;
+  background-position: 45% 45%;
+}
+
+.element-10:hover,
+.element-11:hover,
+.element-12:hover,
+.element-13:hover,
+.element-14:hover,
+.element-15:hover,
+.element-16:hover,
+.element-17:hover,
+.element-18:hover,
+.element-19:hover,
+.element-2:hover,
+.element-3:hover,
+.element-4:hover,
+.element-5:hover,
+.element-6:hover,
+.element-7:hover,
+.element-8:hover,
+.element-9:hover {
+  background-size: 53px auto;
+}
+
+.text-1 {
+  position: relative;
+  z-index: 73;
+  width: 219px;
+  min-height: 58px;
+  margin: -47px 0 0 16.875%;
+  font-family: Verdana;
+  font-size: 1.688em;
+}
+
+.text-11,
+.text-13,
+.text-15,
+.text-17,
+.text-19,
+.text-3,
+.text-5,
+.text-7,
+.text-9 {
+  width: 72.1540456949%;
+  min-height: 38px;
+  margin: 20px 0 0 11.10832%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.text-2 {
+  position: relative;
+  z-index: 77;
+  width: 24.12890625%;
+  min-width: 24.13px;
+  height: 56px;
+  min-height: 47px;
+  margin: 13px 0 0 10%;
+  padding: 16px;
+  background-color: rgb(75, 190, 196);
+  font-size: 1.125em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.text-10,
+.text-12,
+.text-14,
+.text-16,
+.text-18,
+.text-20,
+.text-4,
+.text-6,
+.text-8 {
+  width: 72.0243440087%;
+  min-height: 46px;
+  margin: 26px 0 0 11.11837%;
+  text-shadow: 4px 2px 5px rgba(72, 65, 65, 0.5);
+  font-style: italic;
+  font-size: 2.75em;
+  text-align: center;
+}
+
+._button-3 {
+  position: relative;
+  z-index: 80;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.2487%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-4 {
+  position: relative;
+  z-index: 81;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-5 {
+  position: relative;
+  z-index: 79;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-6 {
+  position: relative;
+  z-index: 78;
+  width: 9.8333333333%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.31771%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.container ._button-1 {
+  width: 3.9166666666%;
+  height: 40px;
+  margin: -47px 0 0 44.95573%;
+  background: url('../images/cart.svg') rgba(75, 190, 196, 0);
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+  background-position: 14% 41%;
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-1:hover {
+  background-color: rgba(244, 93, 236, 0);
+}
+
+.container ._button-1:active {
+  background-color: rgba(159, 7, 150, 0);
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-2 {
+  width: 5.5698371893%;
+  height: 30px;
+  margin: -42px 0 0 48.8724%;
+  background-color: rgb(75, 190, 196);
+  font-family: Bitter;
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-11,
+.container ._button-13,
+.container ._button-15,
+.container ._button-17,
+.container ._button-19,
+.container ._button-21,
+.container ._button-23,
+.container ._button-7,
+.container ._button-9 {
+  width: 100%;
+  height: 157px;
+  background-image: none, url('../images/phone.png');
+  background-repeat: repeat, no-repeat;
+  background-size: auto auto, contain;
+  background-position: left top, center center;
+  background-attachment: scroll, scroll;
+  color: rgb(0, 0, 0);
+}
+
+.container ._button-11:hover,
+.container ._button-13:hover,
+.container ._button-15:hover,
+.container ._button-17:hover,
+.container ._button-19:hover,
+.container ._button-21:hover,
+.container ._button-23:hover,
+.container ._button-7:hover,
+.container ._button-9:hover {
+  background-image: url('../images/Micromax-2(9).jpg'), url('../images/phone.png');
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: center center, center center;
+}
+
+.container ._button-10,
+.container ._button-12,
+.container ._button-14,
+.container ._button-16,
+.container ._button-18,
+.container ._button-20,
+.container ._button-22,
+.container ._button-24,
+.container ._button-8 {
+  width: 46.8792919273%;
+  height: 56px;
+  margin-left: 6.23493%;
+  background: url('../images/cart.svg') rgb(75, 190, 196);
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+  background-position: 14% 41%;
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-10:hover,
+.container ._button-12:hover,
+.container ._button-14:hover,
+.container ._button-16:hover,
+.container ._button-18:hover,
+.container ._button-20:hover,
+.container ._button-22:hover,
+.container ._button-24:hover,
+.container ._button-8:hover {
+  background-color: rgb(244, 93, 236);
+}
+
+.container ._button-10:active,
+.container ._button-12:active,
+.container ._button-14:active,
+.container ._button-16:active,
+.container ._button-18:active,
+.container ._button-20:active,
+.container ._button-22:active,
+.container ._button-24:active,
+.container ._button-8:active {
+  background-color: rgb(159, 7, 150);
+  color: rgb(255, 255, 255);
+}
+
+@media(max-width: 800px) {
+  body {
+    height: 100%;
+    background-image: url('../images/bg01.jpg');
+    background-size: cover;
+    background-position: 47% 0%;
+  }
+
+  .text {
+    margin-left: 15%;
+  }
+
+  .container .container-13 {
+    position: relative;
+    z-index: 29;
+    margin-top: -37px;
+  }
+
+  .container .container-3 {
+    position: relative;
+    z-index: 13;
+    margin-top: -37px;
+  }
+
+  .container .container-7 {
+    position: relative;
+    z-index: 5;
+    margin-top: -37px;
+  }
+
+  .container .element-1 {
+    position: relative;
+    z-index: 72;
+    margin-top: 54px;
+    margin-left: 9.85352%;
+  }
+
+  .container ._button-10,
+  .container ._button-12,
+  .container ._button-14,
+  .container ._button-16,
+  .container ._button-18,
+  .container ._button-20,
+  .container ._button-22,
+  .container ._button-24,
+  .container ._button-8,
+  .container .element-11,
+  .container .element-13,
+  .container .element-15,
+  .container .element-17,
+  .container .element-19,
+  .container .element-3,
+  .container .element-5,
+  .container .element-7,
+  .container .element-9 {
+    margin-left: 6.20747%;
+  }
+
+  .container .text-1 {
+    position: relative;
+    clear: none;
+    z-index: 73;
+    margin-top: 60px;
+    margin-left: 0.64258%;
+  }
+
+  .container .text-14 {
+    position: relative;
+    z-index: 25;
+    margin-left: 11.09935%;
+  }
+
+  .container .text-10,
+  .container .text-11,
+  .container .text-12,
+  .container .text-13,
+  .container .text-15,
+  .container .text-16,
+  .container .text-17,
+  .container .text-18,
+  .container .text-19,
+  .container .text-20,
+  .container .text-3,
+  .container .text-5,
+  .container .text-6,
+  .container .text-7,
+  .container .text-9 {
+    margin-left: 11.09935%;
+  }
+
+  .container .text-4 {
+    position: relative;
+    z-index: 9;
+    margin-left: 11.09935%;
+  }
+
+  .container .text-8 {
+    position: relative;
+    z-index: 1;
+    margin-left: 11.09935%;
+  }
+
+  .container-10 {
+    position: relative;
+    z-index: 47;
+    margin-top: -286px;
+    margin-left: 13.98438%;
+  }
+
+  .container-12 {
+    position: relative;
+    clear: both;
+    z-index: 31;
+    margin-top: -372px;
+    margin-left: 74.51953%;
+  }
+
+  .container-14 {
+    position: relative;
+    clear: none;
+    z-index: 63;
+    margin-top: 269px;
+    margin-left: 20.98047%;
+  }
+
+  .container-16 {
+    position: relative;
+    z-index: 71;
+    margin-top: 269px;
+    margin-left: 13.8125%;
+  }
+
+  .container-18 {
+    position: relative;
+    clear: both;
+    z-index: 55;
+    margin-top: -372px;
+    margin-left: 100.89453%;
+  }
+
+  .container-2 {
+    position: relative;
+    clear: none;
+    z-index: 15;
+    margin-top: 146px;
+    margin-left: 15%;
+  }
+
+  .container-4 {
+    position: relative;
+    z-index: 23;
+    margin-top: 146px;
+    margin-left: 14.7168%;
+  }
+
+  .container-6 {
+    position: relative;
+    clear: both;
+    z-index: 7;
+    margin-top: -372px;
+    margin-left: 53.94336%;
+  }
+
+  .container-8 {
+    position: relative;
+    z-index: 39;
+    margin-top: -286px;
+    margin-left: -5.39258%;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 77;
+    font-style: normal;
+    text-transform: none;
+  }
+
+  ._button-3 {
+    position: relative;
+    z-index: 80;
+    margin-left: 0.24805%;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 81;
+    margin-top: 7px;
+    margin-left: 34.41016%;
+  }
+
+  ._button-5 {
+    position: relative;
+    clear: both;
+    z-index: 79;
+    margin-top: -56px;
+    margin-left: 54.73438%;
+  }
+
+  ._button-6 {
+    position: relative;
+    z-index: 78;
+    margin-top: -56px;
+    margin-left: 64.96875%;
+  }
+
+  .container ._button-1 {
+    clear: both;
+    margin-top: -118px;
+    margin-left: 106.79883%;
+  }
+
+  .container ._button-2 {
+    margin-top: -49px;
+    margin-left: 69.55859%;
+  }
+}
+
+@media(max-width: 800px) {
+  body {
+    font-size: 1em;
+  }
+
+  .container .container-13 {
+    position: relative;
+    z-index: 29;
+  }
+
+  .container .container-3 {
+    position: relative;
+    z-index: 13;
+  }
+
+  .container .container-7 {
+    position: relative;
+    z-index: 5;
+  }
+
+  .container .element-1 {
+    position: relative;
+    z-index: 72;
+  }
+
+  .container .text-1 {
+    position: relative;
+    z-index: 73;
+  }
+
+  .container .text-14 {
+    position: relative;
+    z-index: 25;
+  }
+
+  .container .text-4 {
+    position: relative;
+    z-index: 9;
+  }
+
+  .container .text-8 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container-10 {
+    position: relative;
+    z-index: 47;
+  }
+
+  .container-12 {
+    position: relative;
+    z-index: 31;
+  }
+
+  .container-14 {
+    position: relative;
+    z-index: 63;
+  }
+
+  .container-16 {
+    position: relative;
+    z-index: 71;
+  }
+
+  .container-18 {
+    position: relative;
+    z-index: 55;
+  }
+
+  .container-2 {
+    position: relative;
+    z-index: 15;
+  }
+
+  .container-4 {
+    position: relative;
+    z-index: 23;
+  }
+
+  .container-6 {
+    position: relative;
+    z-index: 7;
+  }
+
+  .container-8 {
+    position: relative;
+    z-index: 39;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 77;
+  }
+
+  ._button-3 {
+    position: relative;
+    z-index: 80;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 81;
+  }
+
+  ._button-5 {
+    position: relative;
+    z-index: 79;
+  }
+
+  ._button-6 {
+    position: relative;
+    z-index: 78;
+  }
+}

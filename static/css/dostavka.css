@@ -1,0 +1,352 @@
+body {
+  min-width: none;
+  height: 100%;
+  min-height: nonepx;
+  background: none rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+.container {
+  float: left;
+}
+
+.container .container {
+  width: 99.9289427428%;
+  height: 33px;
+  border: 1px solid rgb(0, 0, 0);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.container .text {
+  color: rgb(0, 0, 0);
+}
+
+.element {
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 7.3197836332%;
+  height: 58px;
+  margin-left: 11.43099%;
+  background-image: url('../images/logo%20(1).png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+}
+
+.text {
+  float: left;
+}
+
+.text-5 p {
+  margin-bottom: 1em;
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+}
+
+.container ._button {
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.container-1 {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.container-2 {
+  clear: both;
+  width: 69.6333333333%;
+  height: 483px;
+  margin: 20px 0 0 15.16667%;
+}
+
+.text-1 {
+  position: relative;
+  clear: both;
+  z-index: 2;
+  width: 219px;
+  min-height: 58px;
+  margin: -47px 0 0 16.875%;
+  font-family: Verdana;
+  font-size: 1.688em;
+}
+
+.text-2 {
+  position: relative;
+  clear: both;
+  z-index: 6;
+  width: 24.12890625%;
+  min-width: 24.13px;
+  height: 56px;
+  min-height: 47px;
+  margin: 13px 0 0 10%;
+  padding: 16px;
+  background-color: rgb(75, 190, 196);
+  font-size: 1.125em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.text-3 {
+  clear: both;
+  width: 62.6666666666%;
+  min-height: 38px;
+  margin: 30px 0 0 16.79948%;
+  font-size: 1.688em;
+  color: rgb(0, 0, 0);
+}
+
+.text-4 {
+  width: 31.4899348948%;
+  min-height: 70px;
+  margin: 6px 0 0 2.3409399999%;
+  font-size: 1em;
+}
+
+.text-5 {
+  clear: both;
+  width: 99.9289427428%;
+  min-height: 280px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(220, 217, 217, 0.46);
+  font-size: 1em;
+}
+
+._button-3 {
+  position: relative;
+  z-index: 9;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.21094%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-4 {
+  position: relative;
+  z-index: 10;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-5 {
+  position: relative;
+  z-index: 8;
+  width: 9.9166666666%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.24349%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+._button-6 {
+  position: relative;
+  z-index: 7;
+  width: 9.8333333333%;
+  min-width: 24px;
+  height: 50px;
+  min-height: 47px;
+  margin: 13px 0 0 0.31771%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.container ._button-1 {
+  width: 3.9166666666%;
+  height: 40px;
+  margin: -47px 0 0 44.95573%;
+  background: url('../images/cart.svg') rgba(75, 190, 196, 0);
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+  background-position: 14% 41%;
+}
+
+.container ._button-1:hover {
+  background-color: rgba(244, 93, 236, 0);
+}
+
+.container ._button-1:active {
+  background-color: rgba(159, 7, 150, 0);
+  color: rgb(255, 255, 255);
+}
+
+.container ._button-2 {
+  width: 5.5698371893%;
+  height: 30px;
+  margin: -42px 0 0 48.8724%;
+  background-color: rgb(75, 190, 196);
+  font-family: Bitter;
+}
+
+@media(max-width: 800px) {
+  body {
+    height: 100%;
+    background-image: url('../images/bg01.jpg');
+    background-size: cover;
+    background-position: 47% 0%;
+  }
+
+  .container .container,
+  .container .text-5 {
+    width: 99.9270728149%;
+  }
+
+  .container .element {
+    position: relative;
+    z-index: 1;
+    margin-top: 54px;
+    margin-left: 9.85352%;
+  }
+
+  .container .text-1 {
+    position: relative;
+    clear: none;
+    z-index: 2;
+    margin-top: 60px;
+    margin-left: 0.64258%;
+  }
+
+  .container .text-4 {
+    width: 95.4005893082%;
+    margin-top: 0;
+    margin-left: 2.34098%;
+  }
+
+  .container-2 {
+    margin-left: 15.16602%;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 6;
+    margin-left: 15%;
+  }
+
+  .text-3 {
+    clear: none;
+    margin-top: 142px;
+    margin-left: 18.1875%;
+  }
+
+  ._button-3 {
+    position: relative;
+    z-index: 9;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 10;
+    margin-top: 7px;
+    margin-left: 34.41016%;
+  }
+
+  ._button-5 {
+    position: relative;
+    clear: both;
+    z-index: 8;
+    margin-top: -56px;
+    margin-left: 54.69727%;
+  }
+
+  ._button-6 {
+    position: relative;
+    z-index: 7;
+    margin-top: -56px;
+    margin-left: 64.93164%;
+  }
+
+  .container ._button-1 {
+    clear: both;
+    margin-top: -118px;
+    margin-left: 106.79883%;
+  }
+
+  .container ._button-2 {
+    margin-top: -49px;
+    margin-left: 69.55859%;
+  }
+}
+
+@media(max-width: 800px) {
+  body {
+    font-size: 1em;
+  }
+
+  .container .element {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container .text-1 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .text-2 {
+    position: relative;
+    z-index: 6;
+  }
+
+  ._button-3 {
+    position: relative;
+    z-index: 9;
+  }
+
+  ._button-4 {
+    position: relative;
+    z-index: 10;
+  }
+
+  ._button-5 {
+    position: relative;
+    z-index: 8;
+  }
+
+  ._button-6 {
+    position: relative;
+    z-index: 7;
+  }
+}
