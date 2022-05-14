@@ -85,4 +85,4 @@ def user_login(request):
 @login_required
 def dashboard(request):
     """ Page loading dashboard """
-    return render(request, 'dashboard.html', {'section': 'dashboard'})
+    return render(request, 'profile.html', {'section': 'dashboard'})
