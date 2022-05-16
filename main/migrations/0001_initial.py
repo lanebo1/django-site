@@ -35,8 +35,10 @@ class Migration(migrations.Migration):
                 ('price', models.IntegerField()),
                 ('creator_id', models.IntegerField()),
                 ('year', models.IntegerField()),
-                ('country_product', models.CharField(max_length=50)),
                 ('category_id', models.IntegerField()),
+                ('amount', models.IntegerField()),
+                ('availability', models.IntegerField()),
+                ('img', models.ImageField()),
             ],
         ),
     ]

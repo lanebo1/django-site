@@ -6,49 +6,47 @@
   <meta name="viewport" content="initial-scale=1.0">
   <title>tovar</title>
   <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/standardize.css">
-  <link rel="stylesheet" href="css/tovar-grid.css">
-  <link rel="stylesheet" href="css/tovar.css">
+  <link rel="stylesheet" href="/static/css/standardize.css">
+  <link rel="stylesheet" href="/static/css/tovar-grid.css">
+  <link rel="stylesheet" href="/static/css/tovar.css">
 </head>
 <body class="body page-tovar clearfix">
   <div class="container container-1 clearfix">
     <div class="element element-1"></div>
     <p class="text text-1">Electrolux</p>
-    <button onClick="window.location='korzina.html';" class="_button _button-1"></button>
+    <button onClick="window.location='cart';" class="_button _button-1"></button>
     <button class="_button _button-2">Войти</button>
   </div>
   <p class="text text-2">КАТАЛОГ</p>
-  <button onClick="window.location='dostavka.html';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
+  <button onClick="window.location='delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
   <button class="_button _button-4">&nbsp; &nbsp;Блог</button>
-  <button onClick="window.location='index.html';" class="_button _button-5">&nbsp; Информация</button>
+  <button onClick="window.location='info';" class="_button _button-5">&nbsp; Информация</button>
   <button class="_button _button-6">&nbsp; &nbsp;Контакты</button>
-  <p class="text text-3">Смартфон&nbsp;Micromax Canvas Selfie 2 Q340 3G 8Gb Black&nbsp;</p>
+  <p class="text text-3"> {{info.name_product}} </p>
   <div class="container container-2 clearfix">
     <button class="_button _button-7"></button>
     <div class="container container-3 clearfix">
-      <p class="text text-4">5 289.-</p>
+      <p class="text text-4">{{info.price}}-</p>
       <div class="element element-2"></div>
-      <button class="_button _button-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Купить</button>
+      <button onClick="window.location='cart';" class="_button _button-8">&nbsp; &nbsp;Купить</button>
       <div class="container container-4 clearfix">
         <div class="text text-5">
-          <p>В наличие:</p>
-          <p>в 3 магазинах</p>
+          <p>Наличие: {{info.amount}} шт.</p>
 </div>
       </div>
       <div class="container container-5 clearfix">
         <div class="text text-6">
-          <p>Пункты выдачи:</p>
-          <p>доступны</p>
+          <p>Пункты выдачи: {{info.availability}}</p>
 </div>
       </div>
       <div class="container container-6 clearfix">
         <div class="text text-7">
-          <p>Доставим на дом:</p>
-          <p>30 марта (ср)<br></p>
+          <p>Доставим на дом: 30 марта (ср)<br></p>
 </div>
       </div>
     </div>
   </div>
-  <p class="text text-8">Код товара: 4759301</p>
+  <p class="text text-8">Код товара: {{info.art}}</p>
 </body>
+
 </html>
