@@ -33,7 +33,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     #path('/relogin/', django.contrib.auth.views.logout_then_login, name='relogin'),
     path('profile/', views.dashboard, name='profile'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('login/', views.user_login, name='login'),
     path('register/', views.register, name='registr')
 
 ]
