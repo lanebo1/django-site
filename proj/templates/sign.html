@@ -11,22 +11,27 @@
   <link rel="stylesheet" href="/static/css/sign.css">
 </head>
 <body class="body page-sign clearfix">
+
+
   <div class="container container-1 clearfix">
     <div class="element"></div>
     <p class="text text-1">Electrolux</p>
     <button class="_button _button-1"></button>
     <button class="_button _button-2">Войти</button>
   </div>
+  <form action="." method="POST">
+  {% csrf_token %}
   <div class="container container-2 clearfix">
-    <input class="_input _input-1" placeholder="Login" type="text">
+    <input class="_input _input-1" placeholder="Логин" type="text">
     <div class="text text-2">
       <p>Войти&nbsp;</p>
       <p>или зарегистрироваться</p>
 </div>
     <input class="_input _input-2" placeholder="Пароль" type="text">
-    <button class="_button _button-3">Войти/Зарегестрироваться</button>
+    <input style="display:block;" type="submit" class="_button _button-3" value="Войти/Зарегистрироваться">
     <p class="text text-3">Нажимая кнопку "Войти/Зарегестрироваться", Вы соглашаетесь
 c условиями политики конфиденциальности</p>
   </div>
+  </form>
 </body>
 </html>
