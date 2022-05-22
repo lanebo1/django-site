@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'crispy_forms',
     'debug_toolbar',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
 
+CART_SESSION_ID = 'cart'
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/profile/"

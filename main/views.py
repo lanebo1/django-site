@@ -55,7 +55,7 @@ def register(request):
             new_user = user_form.save()
             login(request, new_user)
             #messages.success(request, "Успешно")
-            return redirect("/")
+            return redirect('/')
         else:
             return render(request, "registration/signup.html", {'user_form': user_form})
     else:
