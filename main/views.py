@@ -7,6 +7,10 @@ from .models import Product
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from main.models import Product
+from django.contrib.auth.decorators import login_required
+from cart.cart import Cart
 """ 
     Python file for loading pages and doing things related to loading
 """
@@ -86,3 +90,52 @@ def user_login(request):
 def dashboard(request):
     """ Page loading dashboard """
     return render(request, 'profile.html', {'section': 'dashboard'})
+
+@login_required
+def cart_add(request, id):
+    cart = Cart(request)
+    product = Product.objects.get(id=id)
+    cart.add(product)
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)
+
+
+@login_required
+def item_clear(request, id):
+    cart = Cart(request)
+    product = Product.objects.get(id=id)
+    cart.remove(product)
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)
+
+
+@login_required
+def item_increment(request, id):
+    cart = Cart(request)
+    product = Product.objects.get(id=id)
+    cart.add(product=product)
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)
+
+
+@login_required
+def item_decrement(request, id):
+    cart = Cart(request)
+    product = Product.objects.get(id=id)
+    cart.decrement(product=product)
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)
+
+
+@login_required
+def cart_clear(request):
+    cart = Cart(request)
+    cart.clear()
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)
+
+
+@login_required
+def cart_detail(request):
+    context = {"current_user": request.user}
+    return render(request, "korzina.html", context)

@@ -12,33 +12,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Category',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_category', models.CharField(max_length=50)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Creator',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_creator', models.CharField(max_length=50)),
-                ('country_creator', models.CharField(max_length=50)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Product',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('art', models.IntegerField()),
-                ('name_product', models.CharField(max_length=50)),
+                ('name', models.CharField(max_length=50)),
                 ('price', models.IntegerField()),
-                ('creator_id', models.IntegerField()),
-                ('year', models.IntegerField()),
-                ('category_id', models.IntegerField()),
                 ('amount', models.IntegerField()),
                 ('availability', models.IntegerField()),
-                ('img', models.ImageField()),
+                ('image', models.ImageField()),
             ],
         ),
     ]

@@ -14,15 +14,25 @@
   <div class="container container-1 clearfix">
     <div class="element"></div>
     <p class="text">Electrolux</p>
-    <button class="_button _button-1"></button>
+    <button onClick="window.location='/delivery';" class="_button _button-1">&nbsp;Корзина</button>
     <button class="_button _button-2">Войти</button>
   </div>
   <p class="text text-2">КАТАЛОГ</p>
-  <button class="_button _button-3">&nbsp; &nbsp;Доставка</button>
+  <button onClick="window.location='/delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
   <button class="_button _button-4">&nbsp; &nbsp;Блог</button>
-  <button onClick="window.location='';" class="_button _button-5">&nbsp; Информация</button>
+  <button onClick="window.location='/';" class="_button _button-5">&nbsp; Главная</button>
   <button class="_button _button-6">&nbsp; &nbsp;Контакты</button>
   <p class="text text-3">Корзина</p>
-  <div class="container container-2"></div>
+  <div class="container container-2">{% load cart_tag %}
+
+    Total Length :: {{request.session.cart|length}}
+
+    Cart Detail:
+
+    {% for key,value in request.session.cart.items %}
+
+        {{value.name}} {{value.price}} {{value.quantity}} {{value.image}} Total {{ value.price|multiply:value.quantity }}
+
+    {% endfor %}</div>
 </body>
 </html>

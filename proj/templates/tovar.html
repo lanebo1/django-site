@@ -18,18 +18,18 @@
     <button class="_button _button-2">Войти</button>
   </div>
   <p class="text text-2">КАТАЛОГ</p>
-  <button onClick="window.location='delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
+  <button onClick="window.location='/delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
   <button class="_button _button-4">&nbsp; &nbsp;Блог</button>
-  <button onClick="window.location='info';" class="_button _button-5">&nbsp; Информация</button>
+  <button onClick="window.location='/';" class="_button _button-5">&nbsp; Главная</button>
   <button class="_button _button-6">&nbsp; &nbsp;Контакты</button>
-  <p class="text text-3"> {{info.name_product}} </p>
+  <p class="text text-3"> {{info.name}} </p>
   <div class="container container-2 clearfix">
     <div class="_button _button-7" style="background-image: url('/{{info.img}}')"></div>
     <div class="container container-3 clearfix">
       <p class="text text-4">{{info.price}}-</p>
       <div class="element element-2"></div>
 
-      <button onClick="window.location='/cart';" class="_button _button-8">&nbsp; &nbsp;Купить</button>
+      <button onClick="window.location='/add/{{info.art}}';" class="_button _button-8">&nbsp; &nbsp;Купить</button>
       <div class="container container-4 clearfix">
         <div class="text text-5">
           <p>Наличие: {{info.amount}} шт.</p>
@@ -38,6 +38,7 @@
       <div class="container container-5 clearfix">
         <div class="text text-6">
           <p>Пункты выдачи: {{info.availability}}</p>
+
 </div>
       </div>
 

@@ -21,11 +21,11 @@
   <button class="_button _button-5">Контакты</button>
   {% for product in products %}
   <div class="container container-1 clearfix">
-    <p class="text text-3">{{ product.name_product}}</p>
+    <p class="text text-3">{{ product.name}}</p>
     <p class="text text-4">{{product.price}}.-</p>
     <div class="container container-2 clearfix">
       <div class="element element-2"></div>
-      <a href="/product/{{ product.id }}"><button class="_button _button-9"><img src='/{{product.img}}' width="60px" height="60px"> Купить</button></a>
+      <a href="/product/{{ product.id }}"><button class="_button _button-9"><img src='/{{product.image}}' width="60px" height="60px"> Купить</button></a>
       <div class="element element-3"></div>
     </div>
   </div>

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'cart',
 ]
-
+CART_SESSION_ID = 'cart'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+
         },
     },
 ]
@@ -137,8 +138,6 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
-
-CART_SESSION_ID = 'cart'
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/profile/"
