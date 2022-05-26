@@ -224,7 +224,7 @@ body {
 @media(max-width: 800px) {
   body {
     height: 100%;
-    background-image: url('../images/bg01.jpg');
+    background-image: url('../images/bg01.png');
     background-size: cover;
     background-position: 47% 0%;
   }

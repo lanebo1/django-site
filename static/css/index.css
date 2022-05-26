@@ -2,7 +2,7 @@ body {
   min-width: none;
   height: 100%;
   min-height: nonepx;
-  background: url('../images/bg01.jpg') rgb(243, 243, 243);
+  background: url('../images/bg01.png') rgb(243, 243, 243);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 47% 0%;
@@ -37,7 +37,7 @@ body {
   height: 318px;
   min-height: nonepx;
   border: 3px solid rgb(255, 255, 255);
-  background-image: url('../images/quadro.png'), url('../images/bg02.jpg');
+  background-image: url('../images/bg02.png');
   background-repeat: no-repeat, no-repeat;
   background-size: contain, cover;
   background-position: center center, 98% 0%;
