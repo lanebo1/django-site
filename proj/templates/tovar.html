@@ -14,8 +14,8 @@
   <div class="container container-1 clearfix">
     <div class="element element-1"></div>
     <p class="text text-1">Electrolux</p>
-    <button onClick="window.location='cart';" class="_button _button-1"></button>
-    <button class="_button _button-2">Войти</button>
+    <button onClick="window.location='/cart';" class="_button _button-1"></button>
+    <button onClick="window.location='/register';" class="_button _button-2">Войти</button>
   </div>
   <p class="text text-2">КАТАЛОГ</p>
   <button onClick="window.location='/delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
@@ -24,7 +24,7 @@
   <button class="_button _button-6">&nbsp; &nbsp;Контакты</button>
   <p class="text text-3"> {{info.name}} </p>
   <div class="container container-2 clearfix">
-    <div class="_button _button-7" style="background-image: url('/{{info.img}}')"></div>
+    <div class="_button _button-7" style="background-image: url('/{{info.image}}')"></div>
     <div class="container container-3 clearfix">
       <p class="text text-4">{{info.price}}-</p>
       <div class="element element-2"></div>
