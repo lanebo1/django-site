@@ -41,7 +41,7 @@ def katalog(request):
     """ Function loading catalog page """
     context = {"current_user": request.user}
     context["products"] = Product.objects.all()
-    return render(request, "katalog.html", context)
+    return render(request, "alter_cat.html", context)
 
 
 def product(request, product_id):
@@ -77,7 +77,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Authenticated successfully')
+                    return render(request, 'profile.html', {'section': 'dashboard'})
                 else:
                     return HttpResponse('Disabled account')
             else:
@@ -139,3 +139,8 @@ def cart_clear(request):
 def cart_detail(request):
     context = {"current_user": request.user}
     return render(request, "korzina.html", context)
+
+def contacts(request):
+    """ Function loading contacts page """
+    context = {"current_user": request.user}
+    return render(request, "contacts.html", context)

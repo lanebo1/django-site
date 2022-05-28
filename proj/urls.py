@@ -36,6 +36,7 @@ urlpatterns = [
     path('katalog/',views.katalog, name='katalog'),
     path('delivery/', views.delivery),
     path('info/', views.info),
+    path('contacts/', views.contacts),
     path('admin/', admin.site.urls),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     #path('/relogin/', django.contrib.auth.views.logout_then_login, name='relogin'),

@@ -15,10 +15,10 @@
   <p class="text text-1">Electrolux</p>
   <a href="/register"><button class="_button _button-1">Войти</button></a>
   <p class="text text-2">КАТАЛОГ</p>
-  <button class="_button _button-2">Доставка</button>
-  <button class="_button _button-3">Блог</button>
-  <button onClick="window.location='/';" class="_button _button-4">&nbsp; Информация</button>
-  <button class="_button _button-5">Контакты</button>
+  <button onClick="window.location='/delivery';" class="_button _button-2">Доставка</button>
+  <button onClick="window.location='';" class="_button _button-3">Блог</button>
+  <button onClick="window.location='/';" class="_button _button-4">&nbsp; Главная</button>
+  <button onClick="window.location='/contacts';" class="_button _button-5">Контакты</button>
   {% for product in products %}
   <div class="container container-1 clearfix">
     <p class="text text-3">{{ product.name}}</p>
