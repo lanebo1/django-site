@@ -13,7 +13,7 @@
 <body class="body page-tovar clearfix">
   <div class="container container-1 clearfix">
     <div class="element element-1"></div>
-    <p class="text text-1">Electrolux</p>
+    <p class="text text-1">Proxic</p>
     <button onClick="window.location='/cart';" class="_button _button-1"></button>
     <button onClick="window.location='/register';" class="_button _button-2">Войти</button>
   </div>
@@ -25,7 +25,8 @@
   <p class="text text-3"> {{info.name}} </p>
   <div class="container container-2 clearfix">
 
-    <div class="_button _button-7" style="background-image: url('/{{info.image}}')"></div>
+    <img src="{{ MEDIA_URL }} {{ info.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 15vw; object-fit: cover;">
     <div class="container container-3 clearfix">
       <p class="text text-4">{{info.price}}.-</p>
       <div class="element element-2"></div>

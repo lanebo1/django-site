@@ -41,7 +41,7 @@ def katalog(request):
     """ Function loading catalog page """
     context = {"current_user": request.user}
     context["products"] = Product.objects.all()
-    return render(request, "alter_cat.html", context)
+    return render(request, "katalog.html", context)
 
 
 def product(request, product_id):

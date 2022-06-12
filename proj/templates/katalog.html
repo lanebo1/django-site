@@ -6,30 +6,43 @@
   <meta name="viewport" content="initial-scale=1.0">
   <title>katalog</title>
   <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/static/css/standardize.css">
-  <link rel="stylesheet" href="/static/css/katalog-grid.css">
-  <link rel="stylesheet" href="/static/css/katalog.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body class="body page-katalog clearfix">
-  <div class="element element-1"></div>
-  <p class="text text-1">Electrolux</p>
-  <a href="/register"><button class="_button _button-1">Войти</button></a>
-  <p class="text text-2">КАТАЛОГ</p>
-  <button onClick="window.location='/delivery';" class="_button _button-2">Доставка</button>
-  <button onClick="window.location='';" class="_button _button-3">Блог</button>
-  <button onClick="window.location='/';" class="_button _button-4">&nbsp; Главная</button>
-  <button onClick="window.location='/contacts';" class="_button _button-5">Контакты</button>
-  {% for product in products %}
-  <div class="container container-1 clearfix">
-    <p class="text text-3">{{ product.name}}</p>
-    <p class="text text-4">{{product.price}}.-</p>
-    <div class="container container-2 clearfix">
-      <div class="element element-2"></div>
-      <a href="/product/{{ product.id }}"><button class="_button _button-9"><img src='/{{product.image}}' width="60px" height="60px"> Купить</button></a>
-      <div class="element element-3"></div>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Proxic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% for item in menu %}
+        <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link-active" aria-current="page" href="{{item.url}}">{{item.name}}</a>
+          </li>
+        </ul>
+        {% endfor %}
+      </div>
     </div>
+  </nav>
+  <div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+    {% for product in products %}
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 15vw; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name_product }}</h5>
+            <p class="card-text">{{ product.price }}.-</p>
+              <a href="/product/{{ product.id }}" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+</div>
 </body>
 
 </html>
