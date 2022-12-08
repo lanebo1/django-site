@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_jsonfield_backport',
     'main',
     'crispy_forms',
     'debug_toolbar',
