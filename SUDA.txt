@@ -1,0 +1,6 @@
+1. models.py:
+27 :     cart = models.ForeignKey(Cart, verbose_name=_('cart'), on_delete=models.CASCADE)
+31 :     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+
+2. cart.py
+2 : from . import models
