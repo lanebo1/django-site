@@ -19,6 +19,7 @@ from main import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import LogoutView
 import debug_toolbar
 
 
@@ -38,11 +39,11 @@ urlpatterns = [
     path('info/', views.info),
     path('contacts/', views.contacts),
     path('admin/', admin.site.urls),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     #path('/relogin/', django.contrib.auth.views.logout_then_login, name='relogin'),
     path('profile/', views.dashboard, name='profile'),
-    path('login/', views.user_login, name='login'),
-    path('register/', views.register, name='registr'),
+    path('login/', views.login_view, name="login"),
+    path('register/', views.register_user, name="register"),
+    path('home/', views.home, name="home"),
 
 ]
 

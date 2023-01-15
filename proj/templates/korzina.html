@@ -10,39 +10,56 @@
   <link rel="stylesheet" href="/static/css/korzina-grid.css">
   <link rel="stylesheet" href="/static/css/korzina.css">
     <link href="minimal-table.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 <body class="body page-cart clearfix">
-  <div class="container container-1 clearfix">
-    <div class="element"></div>
-    <p class="text">Proxic</p>
-    <button onClick="window.location='/delivery';" class="_button _button-1">&nbsp;</button>
-    <button onClick="window.location='';" class="_button _button-2">ЗАКАЗАТЬ</button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Proxic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/katalog">Каталог</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/delivery">Доставка и оплата</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Личный кабинет</a>
+      </li>
+    </ul>
   </div>
-  <p class="text text-2">КАТАЛОГ</p>
-  <button onClick="window.location='/delivery';" class="_button _button-3">&nbsp; &nbsp;Доставка</button>
-  <button onClick="window.location='';" class="_button _button-4">&nbsp; &nbsp;Блог</button>
-  <button onClick="window.location='/';" class="_button _button-5">&nbsp; Главная</button>
-  <button onClick="window.location='/katalog';" class="_button _button-6">&nbsp;Вернуться в каталог</button>
+</nav>
   <p class="text text-3">Корзина</p>
   <div class="container container-2">{% load cart_tag %}
-    <p>Total Length: {{request.session.cart|length}}
+    <p>Total Length :: {{request.session.cart|length}}
 </p>
+<table>
 <tr>
-      <td>Name:</td>
-      <td>Price:</td>
-      <td>Kol-vo:</td>
-      <td>Total:</td>
+      <td>Наименование:</td>
+      <td>&nbsp;&nbsp;&nbsp;Цена:&nbsp;&nbsp;&nbsp;</td>
+      <td>Количество:&nbsp;&nbsp;&nbsp;</td>
+      <td>Итог:</td>
     </tr>
       <p></p>
     {% for key,value in request.session.cart.items %}
     <tr>
-      <td>{{value.name}}/</td>
-      <td>{{value.price}}/</td>
-      <td>{{value.quantity}}/</td>
-      <td>Equal Total {{ value.price|multiply:value.quantity }}</td>
+      <td>{{value.name}}</td>
+      <td>&nbsp;&nbsp;&nbsp;{{value.price}}</td>
+      <td>{{value.quantity}}</td>
+      <td>{{ value.price|multiply:value.quantity }}</td>
     </tr>
     <p></p>
-    {% endfor %}</div>
+    {% endfor %}
+</table>
+  </div>
 
 </body>
 </html>

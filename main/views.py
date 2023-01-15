@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm
+from .forms import SignUpForm, LoginForm
 from .models import Product
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -11,6 +11,7 @@ from django.shortcuts import render, redirect
 from main.models import Product
 from django.contrib.auth.decorators import login_required
 from cart.cart import Cart
+
 """ 
     Python file for loading pages and doing things related to loading
 """
@@ -50,22 +51,7 @@ def product(request, product_id):
     context = {"current_user": request.user}
     context["info"] = product_info
     return render(request, "tovar.html", context)
-
-def register(request):
-    """ Function for controlling registration and showing registration page"""
-    if request.method == 'POST':
-        user_form = UserCreationForm(request.POST)
-        if user_form.is_valid():
-            new_user = user_form.save()
-            login(request, new_user)
-            #messages.success(request, "Успешно")
-            return redirect('/')
-        else:
-            return render(request, "registration/signup.html", {'user_form': user_form})
-    else:
-        user_form = UserCreationForm()
-        return render(request, 'registration/signup.html', {'user_form': user_form})
-
+'''
 
 def user_login(request):
     """ Function for controlling authorization and loading login page"""
@@ -86,6 +72,49 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'sign.html', {'form': form})
 
+'''
+def register_user(request):
+    msg = None
+    success = False
+
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get("username")
+            raw_password = form.cleaned_data.get("password1")
+            user = authenticate(username=username, password=raw_password)
+            return redirect("/login/")
+        else:
+            messages.error(request, 'Form is not valid.')
+    else:
+        form = SignUpForm()
+
+    return render(request, "register.html", {"form": form, "msg": msg, "success": success})
+# Login
+def login_view(request):
+    form = LoginForm(request.POST or None)
+
+    msg = None
+    if request.method == "POST":
+
+        if form.is_valid():
+            user = authenticate(username=request.POST.get("username"), password=request.POST.get("password"))
+            if user is not None:
+                login(request, user)
+                return redirect('profile')
+            else:
+                messages.error(request, 'Invalid credentials.')
+        else:
+            messages.error(request, 'Error validating the form.')
+    return render(request, "login.html", {"form": form, "msg": msg})
+
+@login_required
+def home(request):
+    if request.user.is_authenticated:
+        return render(request, "profile.html")
+    return redirect('login')
+
 @login_required
 def dashboard(request):
     """ Page loading dashboard """
@@ -95,8 +124,8 @@ def dashboard(request):
 def cart_add(request, id):
     cart = Cart(request)
     product = Product.objects.get(id=id)
-    cart.add(product)
     context = {"current_user": request.user}
+    cart.add(product, product.price)
     return render(request, "korzina.html", context)
 
 
