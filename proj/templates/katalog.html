@@ -8,25 +8,29 @@
   <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Proxic</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        {% for item in menu %}
-        <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link-active" aria-current="page" href="{{item.url}}">{{item.name}}</a>
-          </li>
-        </ul>
-        {% endfor %}
-      </div>
-    </div>
-  </nav>
-  <div class="container mt-5">
+<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Proxic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Главная <span class="sr-only">(текущая)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/katalog">Каталог</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/delivery">Доставка и оплата</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Личный кабинет</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <div class="container mt-5">
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
     {% for product in products %}
       <div class="col">

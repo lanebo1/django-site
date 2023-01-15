@@ -4,24 +4,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
-  <title>index</title>
-  <link href="http://fonts.googleapis.com/css?family=Bitter:400,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/static/css/standardize.css">
-  <link rel="stylesheet" href="/static/css/index-grid.css">
-  <link rel="stylesheet" href="/static/css/index.css">
+  <title>katalog</title>
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body class="body page-index clearfix">
-  <div class="container container-1 clearfix">
-    <div class="element"></div>
-    <p class="text text-1">Proxic</p>
-    <button onClick="window.location='/cart';" class="_button _button-1"></button>
-    <button onClick="window.location='/register';" class="_button _button-2">Войти</button>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Proxic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Главная <span class="sr-only">(текущая)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/katalog">Каталог</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/delivery">Доставка и оплата</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Личный кабинет</a>
+      </li>
+    </ul>
   </div>
-  <p class="text text-2">Главная</p>
-  <button onClick="window.location='';" class="_button _button-3">&nbsp; &nbsp;О нас</button>
-  <button onClick="window.location='/delivery';" class="_button _button-4">&nbsp; &nbsp;Доставка</button>
-  <button onClick="window.location='/katalog';" class="_button _button-5">&nbsp; &nbsp;Каталог</button>
-  <button onClick="window.location='/contacts';" class="_button _button-6">&nbsp; &nbsp;Контакты</button>
-  <button onClick="window.location='';"class="_button _button-7">&nbsp; &nbsp;Блог</button>
+</nav>
+  <!<div class="container mt-5">
+  <div class="row row-cols-2 row-cols-md-2 g-4 mt-1">
+      <div class="col">
+        <div class="card h-100">
+          <img src="static/images/mainlogo.png" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 30vw; object-fit: contain;">
+          <div class="card-body">
+            <p class="card text-center white bg-success mb-3">Отправиться за покупками</p>
+              <a href="/katalog" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+
+    <div class="container mt-5">
+  <div class="row row-cols-3 row-cols-md-3 g-1 mt-1">
+      <div class="col">
+        <div class="card h-50">
+          <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 5vw; object-fit: cover;">
+          <div class="card-body">
+            <p class="card text">2</p>
+              <a href="/katalog" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card h-50">
+          <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 5vw; object-fit: cover;">
+          <div class="card-body">
+            <p class="card-text">3</p>
+              <a href="/katalog" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card h-50">
+          <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 5vw; object-fit: cover;">
+          <div class="card-body">
+            <p class="card-text">4</p>
+              <a href="/katalog" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 15vw; object-fit: cover;">
+          <div class="card-body">
+            <p class="card-text">6</p>
+              <a href="/katalog" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>>
 </body>
+
 </html>
