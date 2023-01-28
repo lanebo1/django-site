@@ -30,7 +30,7 @@ def cart(request):
 def info(request):
     """ Function loading info page """
     context = {"current_user": request.user}
-    return render(request, "info.html", context)
+    return render(request, "tmp_index.html", context)
 
 def delivery(request):
     """ Function loading delivery page """
