@@ -2,7 +2,7 @@ body {
   min-width: none;
   height: 100%;
   min-height: nonepx;
-  background: none rgb(255, 255, 255);
+	background: linear-gradient(to bottom right, #0C1521, #0C1521);
   background-repeat: no-repeat;
   font: 400 1.125em/1.38 Helvetica;
   color: rgb(0, 0, 0);

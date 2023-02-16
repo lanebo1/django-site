@@ -21,6 +21,24 @@ def index(request):
     context = {"current_user": request.user}
     return render(request, "index.html", context)
 
+def index_i(request):
+    """ Function loading index page """
+    context = {"current_user": request.user}
+    return render(request, "index.html", context)
+def about_i(request):
+    """ Function loading index page """
+    context = {"current_user": request.user}
+    return render(request, "index.html", context)
+def watches(request):
+    """ Function loading index page """
+    context = {"current_user": request.user}
+    return render(request, "index.html", context)
+def contact(request):
+    """ Function loading index page """
+    context = {"current_user": request.user}
+    return render(request, "index.html", context)
+
+
 
 def cart(request):
     """ Function loading cart page """

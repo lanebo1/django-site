@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Login</h3>
+                        <h3>Вход</h3>
                     </div>
                     <div class="card-body">
                         {% if messages %}
@@ -31,23 +31,23 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group position-relative">
-                                        <label>Username <span class="text-danger">*</span></label>
+                                        <label>Имя пользователя (логин) <span class="text-danger">*</span></label>
                                         {{form.username}}
                                         <small class="text-danger">{{ form.errors.username|striptags }}</small>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group position-relative">
-                                        <label>Password <span class="text-danger">*</span></label>
+                                        <label>Пароль <span class="text-danger">*</span></label>
                                         {{form.password}}
                                         <small class="text-danger">{{ form.errors.password|striptags }}</small>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-0">
-                                    <button class="btn btn-primary w-100" type="submit">Login</button>
+                                    <button class="btn btn-primary w-100" type="submit">Войти</button>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <p class="mb-0 mt-3"><small class="text-dark mr-2">Don't have an account ?</small> <a href="{% url 'register' %}" class="text-dark font-weight-bold">Sign Up</a></p>
+                                    <p class="mb-0 mt-3"><small class="text-dark mr-2">Не зарагестрированы?</small> <a href="{% url 'register' %}" class="text-dark font-weight-bold">Регистрация</a></p>
                                 </div>
                             </div>
                         </form>

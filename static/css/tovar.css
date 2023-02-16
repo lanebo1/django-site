@@ -1,5 +1,5 @@
 body {
-  min-width: none;
+  min-width: 1920 px;
   height: 100%;
   min-height: nonepx;
   background: none rgb(255, 255, 255);
@@ -106,6 +106,15 @@ body {
 
 .container-6 {
   position: relative;
+  z-index: 10;
+  width: 29.387755102%;
+  height: 54px;
+  margin: 9px 0 0 1.9611%;
+  background-color: rgba(202, 202, 202, 0.19);
+}
+
+.container-7 {
+position: relative;
   z-index: 10;
   width: 29.387755102%;
   height: 54px;
@@ -301,15 +310,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.container ._button-7 {
-  width: 27.2916666666%;
-  height: 263px;
-  margin: 17px 0 0 8.49935%;
-  background-size: auto auto, contain;
-  background-position: left top, center center;
-  color: rgb(0, 0, 0);
-  background-image: url('../images/{{info.image}}')
-}
+
 
 
 .container ._button-8 {

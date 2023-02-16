@@ -64,3 +64,6 @@ class LoginForm(forms.Form):
         ),error_messages={
                'required': 'The password field is required.'
         })
+
+
+

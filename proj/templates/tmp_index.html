@@ -1,35 +1,77 @@
 <!doctype html>
 {% load static %}
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
-  <title>sign</title>
+  <title>tovar</title>
   <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/static/css/tmp_index.css">
 
+  <link rel="stylesheet" href="/static/css/tovar-grid.css">
+  <link rel="stylesheet" href="/static/css/tovar.css">
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>body{
+  width: 1920px ;
+  }</style>
 </head>
-<input type="checkbox" id="ham-menu">
-<label for="ham-menu">
-  <div class="hide-des">
-    <span class="menu-line"></span>
-    <span class="menu-line"></span>
-    <span class="menu-line"></span>
-    <span class="menu-line"></span>
-    <span class="menu-line"></span>
-    <span class="menu-line"></span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Proxic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Главная </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/katalog">Каталог</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/delivery">Доставка и оплата</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Личный кабинет</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!<div class="container mt-5">
+  <div class="row row-cols-2 row-cols-md-2 g-4 mt-1">
+      <div class="col">
+        <p class="text text-3"> {{info.name}} </p>
+        <img src="{{ MEDIA_URL }} {{ info.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 100%; object-fit: contain;">
+
+      </div>
+
+    <div class="container mt-5">
+  <div class="row row-cols-3 row-cols-md-3 g-1 mt-1">
+      <p class="text text-4">{{info.price}}.-</p>
+      <button onClick="window.location='/add/{{info.art}}';" class="_button _button-8">&nbsp; &nbsp;Купить</button>
+
+
+    <div class="col">
+        <div class="container container-4 clearfix">
+        <div class="text text-5">
+          <p>Наличие:</p> <p> {{info.amount}} шт.</p>
+</div>
+      </div>
+      <div class="container container-5 clearfix">
+        <div class="text text-6">
+          <p>Пункты выдачи:</p> <p> {{info.availability}}</p>
+      </div>
+
+
   </div>
 
-</label>
-<div class="full-page-green"></div>
-<div class="ham-menu">
-  <ul class="centre-text bold-text">
-    <li>Home</li>
-    <li>Categories</li>
-    <li>Services</li>
-    <li>Shop</li>
-    <li>Support</li>
-    <li>Contact us</li>
 
-  </ul>
+
+  </div>
+
 </div>
+</div>
+</body>
+</html>

@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Register</h3>
+                        <h3>Регистрация</h3>
                     </div>
                     <div class="card-body">
                         {% if messages %}
@@ -33,7 +33,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">Username:</label>
+                                        <label class="small mb-1">Имя пользователя (логин):</label>
                                         {{ form.username }}
                                         <small class="text-danger">{{ form.errors.username|striptags }}</small>
                                     </div>
@@ -43,7 +43,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">Email:</label>
+                                        <label class="small mb-1">Адресс эл. почты:</label>
                                         {{ form.email }}
                                         <small class="text-danger">{{ form.errors.email|striptags }}</small>
                                     </div>
@@ -53,7 +53,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">Password:</label>
+                                        <label class="small mb-1">Пароль:</label>
                                         {{ form.password1 }}
                                         <small class="text-danger">{{ form.errors.password1|striptags }}</small>
                                     </div>
@@ -63,18 +63,18 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">Confirm Password:</label>
+                                        <label class="small mb-1">Повторите пароль:</label>
                                         {{ form.password2 }}
                                         <small class="text-danger">{{ form.errors.password2|striptags }}</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-2">Create account</button>
+                                <button type="submit" class="btn btn-primary mt-2">Создать аккаунт</button>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <p class="mb-0 mt-3"><small class="text-dark mr-2">Already have an account ?</small> <a href="{% url 'login' %}" class="text-dark font-weight-bold">Sign in</a></p>
+                                    <p class="mb-0 mt-3"><small class="text-dark mr-2">Уже есть аккаунт?</small> <a href="{% url 'login' %}" class="text-dark font-weight-bold">Войти</a></p>
                                 </div>
                             </div>
                         </form>

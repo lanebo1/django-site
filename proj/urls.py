@@ -44,6 +44,10 @@ urlpatterns = [
     path('login/', views.login_view, name="login"),
     path('register/', views.register_user, name="register"),
     path('home/', views.home, name="home"),
+    path('index_i/', views.index_i, name="home"),
+    path('watches/', views.watches, name="home"),
+    path('about/', views.about_i, name="home"),
+    path('contact/', views.contact, name="home"),
 
 ]
 
