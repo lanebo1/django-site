@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'main',
     'crispy_forms',
     'debug_toolbar',
-    'cart',
+    'cartx',
 
 ]
-CART_SESSION_ID = 'cart'
+CART_SESSION_ID = 'cartx'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

@@ -30,23 +30,24 @@
    	   	<h3 class="Heading">Корзина</h3>
    	   	<h5 class="Action">Удалить все</h5>
    	   </div>
-       {% for key,value in request.session.cart.items %}
+       {% for item in cart %}
+	   {% with product=item.product %}
 	   <div class="CartContainer">
    	   <div class="Cart-Items">
    	   	  <div class="image-box">
-   	   	  	<img src="{{ MEDIA_URL }} {{ key.image.url }}" style="height=120px"; />
+   	   	  	<img src="{{ MEDIA_URL }} {{ product.image.url }}" style="height=120px"; />
    	   	  </div>
    	   	  <div class="about">
-   	   	  	<h1 class="title">{{value.name}}</h1>
-   	   	  	<h3 class="subtitle">{{value.name}}</h3>
+   	   	  	<h1 class="title">{{product.name}}</h1>
+   	   	  	<h3 class="subtitle">{{product.name}}</h3>
    	   	  </div>
    	   	  <div class="counter">
    	   	  	<div class="count">Количество: </div>
-   	   	  	<div class="btn">{{value.quantity}}</div>
+   	   	  	<div class="btn">{{item.quantity}}</div>
    	   	  </div>
    	   	  <div class="prices">
    	   	  	<div class="amount">{{ value.price|multiply:value.quantity }}</div>
-   	   	  	<a href="/item_clear/{{key}}/"> <u>Удалить</u> </a>
+   	   	  	<a href='{% url "cart:cart_remove" product.id%}'> <u>Удалить</u> </a>
    	   	  </div>
    	   </div>
        {% endfor %}

@@ -24,15 +24,9 @@ import debug_toolbar
 
 
 urlpatterns = [
+    path('cart/', include('cartx.urls')),
+
     path('product/<int:product_id>', views.product, name='tovar'),
-    path('add/<int:id>/', views.cart_add, name='cart_add'),
-    path('item_clear/<int:id>/', views.item_clear, name='item_clear'),
-    path('item_increment/<int:id>/',
-         views.item_increment, name='item_increment'),
-    path('item_decrement/<int:id>/',
-         views.item_decrement, name='item_decrement'),
-    path('cart_clear/', views.cart_clear, name='cart_clear'),
-    path('cart/', views.cart_detail, name='cart_detail'),
     path('',views.index, name='index'),
     path('katalog/',views.katalog, name='katalog'),
     path('delivery/', views.delivery),

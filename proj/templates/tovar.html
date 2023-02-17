@@ -33,7 +33,11 @@
       <p class="text text-4">{{info.price}}.-</p>
 
 
-      <button onClick="window.location='/add/{{info.art}}';" class="_button _button-8">&nbsp; &nbsp;Купить</button>
+      <form action='{% url "cart:cart_add" product.id %}' method="post">
+    {{ cart_product_form }}
+    {% csrf_token %}
+    <input type="submit" value="Add to cart">
+</form>
       <div class="container container-4 clearfix">
         <div class="text text-5">
           <p>Наличие:</p> <p> {{info.amount}} шт.</p>
