@@ -1,0 +1,65 @@
+  <!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>cart</title>
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/css/standardize.css">
+
+    <link href="minimal-table.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/static/css/navbar.css">
+	<link rel="stylesheet" href="/static/css/cart_x.css">
+</head>
+<div class="topnav">
+  <a href="/">Главная</a>
+  <a  href="/katalog">Каталог</a>
+  <a href="/contacts">Контакты</a>
+  <a href="/about">Про нас</a>
+  <a href="/profile">Личный кабинет</a>
+  <a class="active"href="/cart">Корзина</a>
+</div>
+<body class="body page-cart clearfix">
+
+	   {% load cart_tag %}
+   	   <div class="Header">
+   	   	<h3 class="Heading">Корзина</h3>
+   	   	<h5 class="Action">Удалить все</h5>
+   	   </div>
+       {% for key,value in request.session.cart.items %}
+	   <div class="CartContainer">
+   	   <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img src="{{ MEDIA_URL }} {{ key.image.url }}" style="height=120px"; />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{value.name}}</h1>
+   	   	  	<h3 class="subtitle">{{value.name}}</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="count">Количество: </div>
+   	   	  	<div class="btn">{{value.quantity}}</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">{{ value.price|multiply:value.quantity }}</div>
+   	   	  	<a href="/item_clear/{{key}}/"> <u>Удалить</u> </a>
+   	   	  </div>
+   	   </div>
+       {% endfor %}
+   </div>
+<div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div>
+   	 		<div class="items">2 items</div>
+   	 	</div>
+   	 	<div class="total-amount">$6.18</div>
+   	 </div>
+   	 <button class="button">Checkout</button></div>
+</body>
+
+</html>

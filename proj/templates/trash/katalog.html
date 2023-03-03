@@ -1,0 +1,45 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>katalog</title>
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/css/katalog_x.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/navbar.css">
+<link rel="stylesheet" href="/static/css/catalog_new.css">
+</head>
+<body>
+
+ <div class="topnav">
+  <a href="/">Главная</a>
+  <a class="active" href="/katalog">Каталог</a>
+  <a href="/contacts">Контакты</a>
+  <a href="/about">Про нас</a>
+  <a href="/profile">Личный кабинет</a>
+  <a href="/cart">Корзина</a>
+</div>
+
+ <div class="container">
+  <div class="row">
+
+    {% for product in products %}
+    <div class="col-md-4 clearfix">
+      <div class="card" style="width: 100%;   background-color: #192C47;">
+        <img src="{{ MEDIA_URL }} {{ product.image.url }}" class="card-img-top"
+               alt="course cover" style="width: 100%; height: 15vw; object-fit: cover;">
+    <h2 class="card-title">{{ product.name }}</h2>
+  <span class="price">{{ product.price }}.-</span>
+        <a href="/product/{{ product.id }}" class="stretched-link"></a>
+</div>
+      </div>
+
+    {% endfor %}
+
+  </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>sign</title>
+  <link href="http://fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/css/standardize.css">
+  <link rel="stylesheet" href="/static/css/sign-grid.css">
+  <link rel="stylesheet" href="/static/css/sign.css">
+</head>
+<body class="body page-sign clearfix">
+
+
+  <div class="container container-1 clearfix">
+    <div class="element"></div>
+    <p class="text text-1">Proxic</p>
+  </div>
+  {% block content %}
+  <form action="." method="POST">
+  {% csrf_token %}
+  <div class="container container-2 clearfix">
+     <input class="_input _input-1" placeholder="Логин" type="text" {{form.username}}
+    <div class="text text-2">
+      <p>Войти</p>
+</div>
+    <input class="_input _input-2" placeholder="Пароль" type="text" {{form.password}}
+    <input style="display:block;" type="submit" class="_button _button-3" value="Войти">
+    <p class="text text-3">Нажимая кнопку "Войти", Вы соглашаетесь
+c условиями политики конфиденциальности</p>
+  </div>
+  </form>
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

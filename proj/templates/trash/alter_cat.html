@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for product in products %}
+  <div class="container container-1 clearfix">
+    <p class="text text-1">{{ product.name}}</p>
+    <p class="text text-2">{{product.price}}.-</p>
+    <div class="container container-2 clearfix">
+      <div class="element element-2"></div>
+      <a href="/product/{{ product.id }}"><button class="_button _button-1">{{product.name}}</button></a>
+      <div class="element element-3"></div>
+    </div>
+  </div>
+  {% endfor %}
+</body>
+</html>
