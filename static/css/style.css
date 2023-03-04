@@ -323,14 +323,18 @@ ul.cart-list > li.total {
     color: #998d80;
     font-size: 24px;
     font-weight: 400;
+    mix-blend-mode: difference;
+    color:rgba(219, 219, 219,0.95);
 }
 .welcome-hero-txt h2 {
     font-size: 48px;
     color: #616060;
     font-weight: 400;
     margin: 20px 0 22px;
+    mix-blend-mode: difference;
+    color:rgba(219, 219, 219,0.95);
 }
-.welcome-hero-txt p{margin: 13px 0 20px;}
+.welcome-hero-txt p{margin: 13px 0 20px;mix-blend-mode: difference;color:rgba(255,255,255,0.95);}
 .welcome-hero-txt .packages-price p {
     margin: 0;
     padding-left: 35px;
@@ -453,81 +457,55 @@ ul.cart-list > li.total {
 /* .carousel-fade */
 
 /*-------------------------------------
-        4. Populer-post
+        4. img-gal
 --------------------------------------*/
-.populer-products{padding:100px 0 0;}
-.single-populer-products{
-    position: relative;
-    min-height:280px;
-    background: #f8f9fc;
-    text-align: center;
-    overflow:hidden;
-}
-.single-populer-product-img.mt40{margin-top: 10px;}
-.single-inner-populer-products{margin-top: 10px;padding: 0 10px 0 10px;text-align: left;}
 
-.single-populer-products h2 a {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 500;
-    color: #5f5b57;
-    margin: 25px 0 22px;
-    -webkit-transition: 0.3s linear; 
-    -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
-    -o-transition: 0.3s linear; 
-    transition: 0.3s linear;
+
+.img-gal .column {
+  float: left;
+  width: 25%;
+  padding: 10px;
 }
-.single-populer-products:hover h2 a{color: #e99c2e;}
-.single-populer-products-para {
-    height: 50px;
-    overflow: hidden;
-    display: inline-block;
+.img-gal .column img {
+  opacity: 0.8;
+  cursor: pointer;
 }
-.single-populer-products-para p {
-    font-size: 14px;
-    padding: 0px 20px;
-    text-transform: initial;
+.img-gal .column img:hover {
+  opacity: 1;
 }
-.single-inner-populer-product-txt {margin-top: 8px;}
-.single-populer-products .single-inner-populer-product-txt h2 a{margin: 0;}
-.single-inner-populer-product-txt span{text-transform:lowercase;}
-.single-inner-populer-product-txt p {
-    font-size: 14px;
-    margin: 18px 0 13px;
+.img-gal .row:after {
+  content: ""; i
+  display: table;
+  clear: both;
 }
-.populer-products-price h4 {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: initial;
+
+.img-gal .container {
+  position: relative;
+  display: none;
 }
-.populer-products-price h4 span{color: #e99c2e;}
-.btn-cart.welcome-add-cart.populer-products-btn {
-    width: 118px;
-    height: 40px;
-    line-height: 40px;
-    color: #5f5b57;
-    background: transparent;
-    border: 1px solid #5f5b57;
-    font-size: 14px;
-    margin-top: 23px;
-    -webkit-transition: 0.3s linear; 
-    -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
-    -o-transition: 0.3s linear; 
-    transition: 0.3s linear;
+
+.img-gal .imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
 }
-.single-populer-products:hover .btn-cart.welcome-add-cart.populer-products-btn {
-    color: #fff;
-    background: #5f5b57;
-    border: 1px solid #5f5b57;
+
+.img-gal .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 
 /*-------------------------------------
         5. New-arrivals 
 --------------------------------------*/
 .new-arrivals {padding:85px 0 70px;}
-.new-arrivals-content{margin-top: 80px;}
+.new-arrivals-content{margin-top: 20px;}
 
 .single-new-arrival{margin-bottom: 50px;text-align: center;}
 .single-new-arrival-bg {
@@ -702,8 +680,8 @@ p.arrival-review span {margin-right: 15px;}
 /*-------------------------------------       
         8.  Blog
 --------------------------------------*/
-.blog {padding:80px 0;}
-
+.blog {padding:100px 0;}
+.blog-content{margin-top: 20px;}
 /*.single-blog*/
 .single-blog{
     -webkit-transition: 0.3s linear; 

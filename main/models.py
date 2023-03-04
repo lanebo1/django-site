@@ -19,6 +19,10 @@ class Product(models.Model):
     fuelecon = models.CharField(max_length=50, null=True)
     price = models.IntegerField(null=True)
     image = models.ImageField(upload_to='static/images/collection')
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to='static/images/collection')
+
 
 class Brand(models.Model):
     art = models.IntegerField()

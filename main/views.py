@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from main.models import Product, TopModel, NewModel, BlogPost, Brand
+from main.models import Product, TopModel, NewModel, BlogPost, Brand, ProductImage
 from django.contrib.auth.decorators import login_required
 
 """ 
@@ -32,10 +32,12 @@ def delivery(request):
 
 def product(request, product_id):
     """ Function loading products on 'tavar' page """
-    product_info = Product.objects.get(id=product_id)
+    product = Product.objects.get(id=product_id)
+    images = ProductImage.objects.filter(product=product)
     context = {"current_user": request.user}
-    context["info"] = product_info
-    return render(request, "product.html", context)
+    context['product'] = product
+    context['images'] = images
+    return render(request, "main_template/product.html", context)
 
 def register_user(request):
     msg = None
