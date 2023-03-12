@@ -24,7 +24,11 @@ import debug_toolbar
 
 
 urlpatterns = [
+    #path('checkout/<int:product_id>', views.out, name='checkout'),
+    #path('out/<int:product_id>', views.out, name='out'),
     path('product/<int:product_id>', views.product, name='product'),
+    path('exit/<int:product_id>', views.exit, name='exit'),
+    path('blog/<int:blog_id>', views.blog, name='blog'),
     path('',views.index, name='index'),
     path('delivery/', views.delivery),
     path('admin/', admin.site.urls),

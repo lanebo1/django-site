@@ -7,6 +7,7 @@ class Product(models.Model):
     model = models.CharField(max_length=50, null=True)
     type = models.CharField(max_length=50, null=True)
     year_of_origin = models.IntegerField(null=True)
+    description = models.CharField(max_length=200, null=True)
     is_prod = models.CharField(max_length=50, null=True)
     engine = models.CharField(max_length=50, null=True)
     torque = models.CharField(max_length=50, null=True)
@@ -19,10 +20,16 @@ class Product(models.Model):
     fuelecon = models.CharField(max_length=50, null=True)
     price = models.IntegerField(null=True)
     image = models.ImageField(upload_to='static/images/collection')
+
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to='static/images/collection')
 
+class ProductPoint(models.Model):
+    product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
+    name = models.CharField(max_length=150, null=True)
+    address = models.CharField(max_length=300, null=True)
+    phonenumber = models.CharField(max_length=100, null=True)
 
 class Brand(models.Model):
     art = models.IntegerField()
@@ -39,14 +46,6 @@ class TopModel(models.Model):
     description3 = models.CharField(max_length=400, null=True)
     image = models.ImageField(upload_to='static/images/collection')
 
-class NewModel(models.Model):
-    art = models.IntegerField()
-    brand = models.CharField(max_length=50, null=True)
-    model = models.CharField(max_length=50, null=True)
-    type = models.CharField(max_length=50, null=True)
-    description = models.CharField(max_length=500, null=True)
-    image = models.ImageField(upload_to='static/images/new')
-
 class BlogPost(models.Model):
     art = models.IntegerField()
     name = models.CharField(max_length=100, null=True)
@@ -54,11 +53,15 @@ class BlogPost(models.Model):
     date = models.CharField(max_length=50, null=True)
     maindesc = models.CharField(max_length=400, null=True)
     mainimg = models.ImageField(upload_to='static/images/blog', null=True)
-    desc1 = models.CharField(max_length=800, null=True)
+    title1 = models.CharField(max_length=80, null=True)
+    desc1 = models.CharField(max_length=8000, null=True)
     img1 = models.ImageField(upload_to='static/images/blog')
-    desc2 = models.CharField(max_length=800, null=True)
+    title2 = models.CharField(max_length=80, null=True)
+    desc2 = models.CharField(max_length=8000, null=True)
     img2 = models.ImageField(upload_to='static/images/blog')
-    desc3 = models.CharField(max_length=800, null=True)
+    title3 = models.CharField(max_length=80, null=True)
+    desc3 = models.CharField(max_length=8000, null=True)
     img3 = models.ImageField(upload_to='static/images/blog')
-    finaldesc = models.CharField(max_length=800, null=True)
+    finaldesc = models.CharField(max_length=8000, null=True)
+
 

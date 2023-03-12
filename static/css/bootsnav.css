@@ -644,44 +644,44 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         background-color: transparent;
         border: none;
     }
-    
+
     nav.navbar.bootsnav.navbar-transparent .attr-nav{
         padding-left: 15px;
         margin-left: 30px;
     }
-    
+
     nav.navbar.bootsnav.navbar-transparent.white{
         background-color: rgba(255,255,255,0.3);
         border-bottom: solid 1px #bbb;
     }
-    
+
     nav.navbar.navbar-inverse.bootsnav.navbar-transparent.dark,
     nav.navbar.bootsnav.navbar-transparent.dark{
         background-color: rgba(0,0,0,0.3);
         border-bottom: solid 1px #555;
     }
-    
+
     nav.navbar.bootsnav.navbar-transparent.white .attr-nav{
         border-left: solid 1px #bbb;
     }
-    
+
     nav.navbar.navbar-inverse.bootsnav.navbar-transparent.dark .attr-nav,
     nav.navbar.bootsnav.navbar-transparent.dark .attr-nav{
         border-left: solid 1px #555;
     }
-    
+
     nav.navbar.bootsnav.no-background.white .attr-nav > ul > li > a,
     nav.navbar.bootsnav.navbar-transparent.white .attr-nav > ul > li > a,
     nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a,
     nav.navbar.bootsnav.no-background.white ul.nav > li > a{
         color: #fff;
     }
-    
+
     nav.navbar.bootsnav.navbar-transparent.dark .attr-nav > ul > li > a,
     nav.navbar.bootsnav.navbar-transparent.dark ul.nav > li > a{
         color: #eee;
     }
-    
+
     nav.navbar.bootsnav.navbar-fixed.navbar-transparent .logo-scrolled,
     nav.navbar.bootsnav.navbar-fixed.no-background .logo-scrolled{
         display: none;

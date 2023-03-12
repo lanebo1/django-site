@@ -1,78 +1,48 @@
 <!doctype html>
 {% load static %}
 <html class="no-js" lang="en">
-
     <head>
-        <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <!-- title of site -->
-        <title>Furniture</title>
-        <!-- For favicon png  /static/css/standardize.css   -->
-		<link rel="shortcut icon" type="image/icon" href="/static/logo/favicon.png"/>
-        <!--font-awesome.min.css-->
+        <title>...</title>
         <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-        <!--linear icon css-->
 		<link rel="stylesheet" href="/static/css/linearicons.css">
-		<!--animate.css-->
         <link rel="stylesheet" href="/static/css/animate.css">
-        <!--owl.carousel.css-->
         <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
 		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
-        <!--bootstrap.min.css-->
         <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-		<!-- bootsnav -->
 		<link rel="stylesheet" href="/static/css/bootsnav.css" >
-        <!--style.css-->
         <link rel="stylesheet" href="/static/css/style.css">
-        <!--responsive.css-->
         <link rel="stylesheet" href="/static/css/responsive.css">
     </head>
 
 	<body>
-		<!--welcome-hero start -->
-		<header id="home" class="welcome-hero">
+		<header id="home" class="upper-part">
 			<div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-				<!--/.carousel-indicator
-				 <ol class="carousel-indicators">
-					<li data-target="#header-carousel" data-slide-to="0" class="active"><span class="small-circle"></span></li>
-					<li data-target="#header-carousel" data-slide-to="1"><span class="small-circle"></span></li>
-					<li data-target="#header-carousel" data-slide-to="2"><span class="small-circle"></span></li>
-				</ol> /ol-->
-				<!--/.carousel-indicator -->
-				<!--sofa-collection start -->
-				<section id="sofa-collection">
+				<section id="new-products">
 					<div class="owl-carousel owl-theme" id="collection-carousel">
 						{% for mod in topmodel %}
-						<div class="sofa-collection collectionbg1" style="background-image: url({{ mod.image.url }});"	>
+						<div class="new-products collectionbg1" style="background-image: url({{ mod.image.url }});"	>
 							<div class="container">
-								<div class="sofa-collection-txt">
+								<div class="new-products-txt">
 									<h2>{{mod.brand}} {{mod.model}} {{mod.type}}</h2>
 									<p>
 										<h4>{{mod.description1}} {{mod.description2}} {{mod.description3}}</h4>
 									</p>
-									<button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
+									<button class="btn-cart welcome-add-cart new-products-btn" onclick="window.location.href='#'">
 										Скоро в продаже
 									</button>
 								</div>
 							</div>
-						</div><!--/.sofa-collection-->
+						</div>
 						{% endfor %}
-					</div><!--/.collection-carousel-->
-				</section><!--/.sofa-collection-->
-				<!--sofa-collection end -->
-				<!--/.carousel-inner -->
-
-			<!-- top-area Start -->
+					</div>
+				</section>
 			<div class="top-area">
 				<div class="header-area">
-					<!-- Start Navigation -->
 				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-				        <!-- Start Top Search -->
 				        <div class="top-search">
 				            <div class="container">
 				                <div class="input-group">
@@ -82,92 +52,73 @@
 				                </div>
 				            </div>
 				        </div>
-				        <!-- End Top Search -->
 				        <div class="container">
-				            <!-- Start Atribute Navigation -->
 				            <div class="attr-nav">
 				                <ul>
 				                	<li class="search">
 				                		<a href="#"><span class="lnr lnr-magnifier"></span></a>
-				                	</li><!--/.search-->
+				                	</li>
 				                	<li class="nav-setting">
-				                		<a href="/product/10"><span class="lnr lnr-cog"></span></a>
-				                	</li><!--/.search-->
+				                		<a href="#"><span class="lnr lnr-cog"></span></a>
+				                	</li>
 				                </ul>
-				            </div><!--/.attr-nav-->
-				            <!-- End Atribute Navigation -->
-				            <!-- Start Header Navigation -->
+				            </div>
 				            <div class="navbar-header">
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="index.html">furn.</a>
-				            </div><!--/.navbar-header-->
-				            <!-- End Header Navigation -->
-				            <!-- Collect the nav links, forms, and other content for toggling -->
+				                <a class="navbar-brand" href="index.html">...</a>
+				            </div>
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
 				                    <li class=" scroll active"><a href="#home">Новые поступления</a></li>
-				                    <li class="scroll"><a href="#new-arrivals">Ассортимент</a></li>
+				                    <li class="scroll"><a href="#product-display">Ассортимент</a></li>
 				                    <li class="scroll"><a href="#blog">Посты</a></li>
-				                    <li class="scroll"><a href="#newsletter">Контакты</a></li>
-				                </ul><!--/.nav -->
-				            </div><!-- /.navbar-collapse -->
-				        </div><!--/.container-->
-				    </nav><!--/nav-->
-				    <!-- End Navigation -->
-				</div><!--/.header-area-->
+				                    <li class="scroll"><a href="#lower-part">Контакты</a></li>
+				                </ul>
+				            </div>
+				        </div>
+				    </nav>
+				</div>
 			    <div class="clearfix"></div>
-			</div><!-- /.top-area-->
-			<!-- top-area End -->
-		</header><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+			</div>
+		</header>
 
-		<!--new-arrivals start -->
-		<section id="new-arrivals" class="new-arrivals">
+		<section id="product-display" class="product-display">`
 			<div class="container">
 				<div class="section-header">
 					<h2>Текущий ассортимент</h2>
-				</div><!--/.section-header-->
-				<div class="new-arrivals-content">
+				</div>
+				<div class="product-display-content">
 					<div class="row">
 						{% for product in products %}
 							<div class="col-md-3 col-sm-4">
 								<div class="single-new-arrival">
 									<div class="single-new-arrival-bg">
-										<a href="/product/{{ product.id }}"><img src="{{ MEDIA_URL }} {{ product.image.url }}" alt="new-arrivals images"></a>
+										<a href="/product/{{ product.id }}"><img src="{{ MEDIA_URL }} {{ product.image.url }}" alt="product-display images"></a>
 										<div class="single-new-arrival-bg-overlay"></div>
-										<!--<div class="sale bg-1">
-											<p>sale</p>
-										</div>-->
 										<div class="new-arrival-cart">
 											<p>
 												<span class="lnr lnr-cart"></span>
-												<a href="/product/{{ product.id }}">Перейти <span>к </span> конфигурации</a>
+												<a href="/product/{{ product.id }}">Перейти <span>к </span> характеристикам</a>
 											</p>
-											<!--<p class="arrival-review pull-right">
-												<span class="lnr lnr-heart"></span>
-												<span class="lnr lnr-frame-expand"></span>
-											</p>-->
 										</div>
 									</div>
 									<h4><a href="/product/{{ product.id }}">{{product.brand}} {{product.model}} {{product.type}}</a></h4>
-									<p class="arrival-product-price">{{product.price}} ₽</p>
+									<p class="arrival-product-price">{{product.description}}</p>
 								</div>
 							</div>
 						{% endfor %}
 					</div>
 				</div>
-			</div><!--/.container-->
-		</section><!--/.new-arrivals-->
-		<!--new-arrivals end -->
+			</div>
+		</section>
 
-		<!--blog start -->
 		<section id="blog" class="blog">
 			<div class="container">
 				<div class="section-header">
 					<h2>Недавние посты</h2>
-				</div><!--/.section-header-->
+				</div>
 				<div class="blog-content">
 					<div class="row">
 						{% for blog in blogpost %}
@@ -178,7 +129,7 @@
 									<div class="single-blog-img-overlay"></div>
 								</div>
 								<div class="single-blog-txt">
-									<h2><a href="#">{{blog.name}}</a></h2>
+									<h2><a href="/blog/{{blog.id}}">{{blog.name}}</a></h2>
 									<h3><a href="#">{{blog.author}}</a> / {{blog.date}}</h3>
 									<p>
 										{{blog.maindesc}}
@@ -189,78 +140,9 @@
 						{% endfor %}
 					</div>
 				</div>
-			</div><!--/.container-->
-
-		</section><!--/.blog-->
-		<!--blog end -->
-		<!--populer-products start -->
-		<section id="populer-products" class="populer-products">
-			<div class="container">
-				<div class="populer-products-content">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="single-populer-products">
-								<div class="single-populer-product-img mt40">
-									<img src="/static/images/populer-products/okpic.png" alt="populer-products images">
-								</div>
-								<h2><a href="#">Безупречная гарантия</a></h2>
-								<div class="single-populer-products-para">
-									<p>Наши профессионалы сделают все и-де-аль-но!</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="single-populer-products">
-								<div class="single-inner-populer-products">
-									<div class="row">
-										<div class="col-md-4 col-sm-12">
-											<div class="single-inner-populer-product-img">
-												<img src="/static/images/populer-products/ui-tool.png" alt="populer-products images">
-											</div>
-										</div>
-										<div class="col-md-8 col-sm-12">
-											<div class="single-inner-populer-product-txt">
-												<h2>
-													<a href="#">
-														Загляните в наши сервисные центры
-													</a>
-												</h2>
-												<p>
-													Всегда лучшее качество на всех этапах: от производства деталей до ручной работы.
-												</p>
-												<div class="populer-products-price">
-													<h4>Быстро. Удобно. Качественно.</h4>
-												</div>
-												<button class="btn-cart welcome-add-cart populer-products-btn" onclick="window.location.href='#'">
-													Узнать больше
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="single-populer-products">
-								<div class="single-populer-products">
-									<div class="single-populer-product-img">
-										<img src="/static/images/populer-products/timerpic.jpg" alt="populer-products images">
-									</div>
-									<h2><a href="#">Поддержка на уровне</a></h2>
-									<div class="single-populer-products-para">
-										<p>Рассмотрение заказов производится в минимальные сроки.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.container-->
-
-		</section><!--/.populer-products-->
-		<!--populer-products end-->
-		<!-- clients strat -->
-		<section id="clients"  class="clients">
+			</div>
+		</section>
+		<section id="brands"  class="brands">
 			<div class="container">
 				<div class="owl-carousel owl-theme" id="client">
 					{% for type in brand %}
@@ -268,15 +150,13 @@
 							<a href="#">
 								<img src="{{ MEDIA_URL }} {{ type.img.url }}" alt="brand-image" />
 							</a>
-						</div><!--/.item-->
+						</div>
 					{% endfor %}
-					</div><!--/.owl-carousel-->
-			</div><!--/.container-->
-		</section><!--/.clients-->
-		<!-- clients end -->
+					</div>
+			</div>
+		</section>
 
-		<!--newsletter strat -->
-		<section id="newsletter"  class="newsletter">
+		<section id="lower-part"  class="lower-part">
 			<div class="container">
 				<div class="hm-footer-details">
 					<div class="row">
@@ -284,68 +164,66 @@
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
 									<h4>Информация</h4>
-								</div><!--/.hm-foot-title-->
+								</div>
 								<div class="hm-foot-menu">
 									<ul>
-										<li><a href="#">О нас</a></li><!--/li-->
-										<li><a href="#">Свяжитесь с нами</a></li><!--/li-->
-										<li><a href="#">Новости</a></li><!--/li-->
-										<li><a href="#">Расположение сервисных центров</a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-menu-->
-							</div><!--/.hm-footer-widget-->
-						</div><!--/.col-->
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Свяжитесь с нами</a></li>
+										<li><a href="#">Новости</a></li>
+										<li><a href="#">Расположение сервисных центров</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
 									<h4></h4>
-								</div><!--/.hm-foot-title-->
+								</div>
 								<div class="hm-foot-menu">
 									<ul>
-										<li><a href="#"></a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-menu-->
-							</div><!--/.hm-footer-widget-->
-						</div><!--/.col-->
+										<li><a href="#"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
 									<h4></h4>
-								</div><!--/.hm-foot-title-->
+								</div>
 								<div class="hm-foot-menu">
 									<ul>
-										<li><a href="#"></a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-menu-->
-							</div><!--/.hm-footer-widget-->
-						</div><!--/.col-->
+										<li><a href="#"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 						<div class=" col-md-3 col-sm-6  col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
 									<h4>Новостная рассылка</h4>
-								</div><!--/.hm-foot-title-->
+								</div>
 								<div class="hm-foot-para">
 									<p>
 										Подпишитесь чтобы получать новые предложения, новости и информацию о других событиях
 									</p>
-								</div><!--/.hm-foot-para-->
+								</div>
 								<div class="hm-foot-email">
 									<div class="foot-email-box">
 										<input type="text" class="form-control" placeholder="Введите свой e-mail....">
-									</div><!--/.foot-email-box-->
+									</div>
 									<div class="foot-email-subscribe">
 										<span><i class="fa fa-location-arrow"></i></span>
-									</div><!--/.foot-email-icon-->
-								</div><!--/.hm-foot-email-->
-							</div><!--/.hm-footer-widget-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-				</div><!--/.hm-footer-details-->
-			</div><!--/.container-->
-		</section><!--/newsletter-->
-		<!--newsletter end -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		<!--footer start-->
 		<footer id="footer"  class="footer">
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
@@ -356,12 +234,10 @@
 						<a href="https://getbootstrap.com/docs/3.3/"><i class="fa fa-css3 "></i></a>
 						<a href="https://gitlab.informatics.ru/2021-2022/ftp/s101/5d"><i class="fa fa-gitlab"></i></a>
 					</div>
-				</div><!--/.text-center-->
-			</div><!--/.container-->
-        </footer><!--/.footer-->
-		<!--footer end-->
+				</div>
+			</div>
+        </footer>
 
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 		<script src="/static/js/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="/static/js/bootstrap.min.js"></script>
