@@ -684,7 +684,7 @@ span.spacial-feature-icon i {color:  #a9a9a9;}
     -o-transform:scale(1);
     transform:scale(1);
 }
-.single-blog-txt h2 a{color:#1e1f20;text-transform: initial;margin: 0 0 15px 0;}
+.single-blog-txt h2 a{color:#80807d;text-transform: initial;margin: 0 0 10px 0;}
 .single-blog-txt h3,.single-blog-txt h3 a {
     color: #bcb7b2;
     font-size: 14px;
@@ -693,7 +693,7 @@ span.spacial-feature-icon i {color:  #a9a9a9;}
 .single-blog-txt h3 a {margin: 0;}
 .single-blog-txt p {
     font-size: 13px;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #dbd8d5;
     text-overflow: ellipsis;
     white-space: nowrap;

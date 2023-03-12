@@ -1,17 +1,9 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm, LoginForm
-from .models import Product
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from main.models import Product, TopModel, BlogPost, Brand, ProductImage, ProductPoint
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse
-from urllib.parse import urlencode
 """ 
     Python file for loading pages and doing things related to loading
 """
