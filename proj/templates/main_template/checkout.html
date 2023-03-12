@@ -1,0 +1,237 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <title>...</title>
+        <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/css/linearicons.css">
+        <link rel="stylesheet" href="/static/css/animate.css">
+        <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/bootsnav.css" >
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/responsive.css">
+    </head>
+	<body>
+		<header id="home" class="upper-part">
+			<div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+				<section id="new-products">
+					<div class="owl-carousel owl-theme" id="collection-carousel">
+						<div class="new-products collectionbg1" style="background-image: url({{ product.image.url }});"	>
+							<div class="container">
+								<div class="new-products-txt">
+									<h2>{{product.brand}} {{product.model}} {{product.year_of_origin}}</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			<div class="top-area">
+				<div class="header-area">
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+				        <div class="top-search">
+				            <div class="container">
+				                <div class="input-group">
+				                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+				                    <input type="text" class="form-control" placeholder="Search">
+				                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="container">
+				            <div class="attr-nav">
+				                <ul>
+				                	<li class="search">
+				                		<a href="#"><span class="lnr lnr-magnifier"></span></a>
+				                	</li>
+				                	<li class="nav-setting">
+				                		<a href="#"><span class="lnr lnr-cog"></span></a>
+				                	</li>
+				                </ul>
+				            </div>
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				                    <i class="fa fa-bars"></i>
+				                </button>
+				                <a class="navbar-brand" href="/">...</a>
+				            </div>
+				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+				                    <li class=" scroll active"><a href="#home">{{product.brand}} {{product.model}} {{product.year_of_origin}}</a></li>
+				                    <li class="scroll"><a href="#product-display">Расположение дилерских центров</a></li>
+				                    <li class="scroll"><a href="#lower-part">Контакты</a></li>
+				                </ul>
+				            </div>
+				        </div>
+				    </nav>
+				</div>
+			</div>
+		</header>
+
+		<section id="product-display" class="product-display">
+			<div class="container">
+				<div class="section-header">
+					<h2>Выбранные технические характеристики {{product.brand}} {{product.model}} {{product.year_of_origin}}</h2>
+				</div><!--/.section-header-->
+				<div class="product-display-content">
+					<div class="row">
+							<div class="col-md-3 col-sm-5">
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Двигатель</p>
+									<h4>{{product.engine}}</h4>
+								</div>
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Мощность </p>
+									<h4>{{product.torque}}</h4>
+								</div>
+							</div>
+						<div class="col-md-3 col-sm-5">
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Привод</p>
+									<h4>{{product.drive}}</h4>
+								</div>
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Коробка передач</p>
+									<h4>{{product.gearbox}}</h4>
+								</div>
+							</div>
+						<div class="col-md-3 col-sm-5">
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Топливный бак</p>
+									<h4>{{product.fueltank}} л</h4>
+								</div>
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Расход</p>
+									<h4>{{product.fuelecon}} л / 100 км</h4>
+								</div>
+							</div>
+						<div class="col-md-3 col-sm-5">
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Расположение руля</p>
+									<h4>{{product.hand}}</h4>
+								</div>
+								<div class="single-new-arrival">
+									<p class="arrival-product-price">Цена</p>
+									<h4>От {{product.price}} рублей</h4>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="product-display" class="product-display">
+			<div class="container">
+				<div class="section-header">
+					<h2>Расположение дилерских центров</h2>
+				</div><!--/.section-header-->
+				<div class="product-display-content">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1nk4hjQKT7atCMAtqSCF35x7zGvgv0qI&ehbc=2E312F" width="1170" height="480"></iframe>
+					<div class="row">
+					{% for point in points %}
+						<div class="col-md-3 col-sm-5">
+							<h2>{{point.name}}</h2>
+							<p>{{point.address}}</p>
+							<p>Телефон: +7-{{point.phonenumber}}</p>
+							<a href="tel:{{point.phonenumber}}">Позвонить</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		<section id="lower-part"  class="lower-part">
+			<div class="container">
+				<div class="hm-footer-details">
+					<div class="row">
+						<div class=" col-md-3 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4>Связаться с нами</h4>
+								</div>
+								<div class="hm-foot-menu">
+									<ul>
+										<li><a href="tel:123-456-7890">Позвонить консультанту</a></li>
+										<li><a href="tel:123-456-7890">Телефон отдела продаж</a></li>
+										<li><a href="tel:123-456-7890">Телефон технической поддержки</a></li>
+										<li><a href="mailto:kirillefimovic141@gmail.com">Напишите нам</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class=" col-md-3 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4></h4>
+								</div>
+								<div class="hm-foot-menu">
+									<ul>
+										<li><a href="#"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class=" col-md-3 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4></h4>
+								</div>
+								<div class="hm-foot-menu">
+									<ul>
+										<li><a href="#"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class=" col-md-3 col-sm-6  col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4>Новостная рассылка</h4>
+								</div>
+								<div class="hm-foot-para">
+									<p>
+										Подпишитесь чтобы получать новые предложения, новости и информацию о других событиях
+									</p>
+								</div>
+								<div class="hm-foot-email">
+									<div class="foot-email-box">
+										<input type="text" class="form-control" placeholder="Введите свой e-mail....">
+									</div>
+									<div class="foot-email-subscribe">
+										<span><i class="fa fa-location-arrow"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="hm-footer-copyright text-center">
+					<div class="footer-social">
+						<a href="https://vk.com/cblblblblp"><i class="fa fa-vk"></i></a>
+						<a href="https://web.telegram.org/z/Lil_old_ded"><i class="fa fa-telegram"></i></a>
+						<a href="https://www.youtube.com/watch?v=u_z4X-ZcZUw"><i class="fa fa-youtube-play"></i></a>
+						<a href="https://getbootstrap.com/docs/3.3/"><i class="fa fa-css3 "></i></a>
+						<a href="https://gitlab.informatics.ru/2021-2022/ftp/s101/5d"><i class="fa fa-gitlab"></i></a>
+					</div>
+				</div>
+			</div>
+        </footer>
+
+		<script src="/static/js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/bootsnav.js"></script>
+        <script src="/static/js/owl.carousel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="/static/js/custom.js"></script>
+    </body>
+</html>
