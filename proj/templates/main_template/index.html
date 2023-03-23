@@ -105,7 +105,6 @@
 										</div>
 									</div>
 									<h4><a href="/product/{{ product.id }}">{{product.brand}} {{product.model}} {{product.type}}</a></h4>
-									<p class="arrival-product-price">{{product.description}}</p>
 								</div>
 							</div>
 						{% endfor %}
@@ -125,8 +124,8 @@
 						<div class="col-md-4 col-sm-4">
 							<div class="single-blog">
 								<div class="single-blog-img">
-									<img src="{{ MEDIA_URL }} {{ blog.mainimg.url }}" alt="blog image" style="width:360px; height: 175px; border:4px solid dimgray" >
-									<div class="single-blog-img-overlay"></div>
+									<center><img src="{{ MEDIA_URL }} {{ blog.mainimg.url }}" alt="blog image" style=" height: 175px; border:4px solid dimgray" ></center>
+
 								</div>
 								<div class="single-blog-txt">
 									<h2><a href="/blog/{{blog.id}}">{{blog.name}}</a></h2>
